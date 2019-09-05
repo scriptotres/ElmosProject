@@ -1,0 +1,32 @@
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Services\bin\Debug\netcoreapp2.2\Slick.Services.deps.json
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Services\bin\Debug\netcoreapp2.2\Slick.Services.dll
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Services\bin\Debug\netcoreapp2.2\Slick.Services.pdb
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Services\bin\Debug\netcoreapp2.2\Slick.Database.dll
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Services\bin\Debug\netcoreapp2.2\Slick.Models.dll
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Services\bin\Debug\netcoreapp2.2\Slick.Repositories.dll
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Services\bin\Debug\netcoreapp2.2\Slick.Models.pdb
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Services\bin\Debug\netcoreapp2.2\Slick.Repositories.pdb
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Services\bin\Debug\netcoreapp2.2\Slick.Database.pdb
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Services\obj\Debug\netcoreapp2.2\Slick.Services.csprojAssemblyReference.cache
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Services\obj\Debug\netcoreapp2.2\Slick.Services.csproj.CoreCompileInputs.cache
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Services\obj\Debug\netcoreapp2.2\Slick.Services.AssemblyInfoInputs.cache
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Services\obj\Debug\netcoreapp2.2\Slick.Services.AssemblyInfo.cs
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Services\obj\Debug\netcoreapp2.2\Slick.Services.csproj.CopyComplete
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Services\obj\Debug\netcoreapp2.2\Slick.Services.dll
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Services\obj\Debug\netcoreapp2.2\Slick.Services.pdb
+C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Services\bin\Debug\netcoreapp2.2\Slick.Services.deps.json
+C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Services\bin\Debug\netcoreapp2.2\Slick.Services.dll
+C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Services\bin\Debug\netcoreapp2.2\Slick.Services.pdb
+C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Services\bin\Debug\netcoreapp2.2\Slick.Database.dll
+C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Services\bin\Debug\netcoreapp2.2\Slick.Models.dll
+C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Services\bin\Debug\netcoreapp2.2\Slick.Repositories.dll
+C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Services\bin\Debug\netcoreapp2.2\Slick.Models.pdb
+C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Services\bin\Debug\netcoreapp2.2\Slick.Repositories.pdb
+C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Services\bin\Debug\netcoreapp2.2\Slick.Database.pdb
+C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Services\obj\Debug\netcoreapp2.2\Slick.Services.csprojAssemblyReference.cache
+C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Services\obj\Debug\netcoreapp2.2\Slick.Services.csproj.CoreCompileInputs.cache
+C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Services\obj\Debug\netcoreapp2.2\Slick.Services.AssemblyInfoInputs.cache
+C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Services\obj\Debug\netcoreapp2.2\Slick.Services.AssemblyInfo.cs
+C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Services\obj\Debug\netcoreapp2.2\Slick.Services.csproj.CopyComplete
+C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Services\obj\Debug\netcoreapp2.2\Slick.Services.dll
+C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Services\obj\Debug\netcoreapp2.2\Slick.Services.pdb

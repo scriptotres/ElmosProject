@@ -1,0 +1,21 @@
+  {
+	email:'Jonandebielde@hotmail.com',
+	firstname:'felix',
+	lastname:'De Bielde',
+	Address:{
+		Street:'Laarstraat',
+		Number:'64',
+		City:'Bevel',
+		Zip:'2560',
+		Country:'België'
+	},
+	Contracts:[
+		{
+		StartDate:'01/01/2019',
+		EndDate:'01/02/2029',
+		Salary:255500,
+		ContractType:{
+			title:'Freelancer'
+		}
+		}]
+  }

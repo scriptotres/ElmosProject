@@ -1,0 +1,12 @@
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Database\bin\Debug\netcoreapp2.1\Slick.Database.deps.json
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Database\bin\Debug\netcoreapp2.1\Slick.Database.dll
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Database\obj\Debug\netcoreapp2.1\Slick.Database.csprojAssemblyReference.cache
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Database\obj\Debug\netcoreapp2.1\Slick.Database.csproj.CoreCompileInputs.cache
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Database\obj\Debug\netcoreapp2.1\Slick.Database.AssemblyInfoInputs.cache
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Database\obj\Debug\netcoreapp2.1\Slick.Database.AssemblyInfo.cs
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Database\bin\Debug\netcoreapp2.1\Slick.Database.pdb
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Database\bin\Debug\netcoreapp2.1\Slick.Models.dll
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Database\bin\Debug\netcoreapp2.1\Slick.Models.pdb
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Database\obj\Debug\netcoreapp2.1\Slick.Database.csproj.CopyComplete
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Database\obj\Debug\netcoreapp2.1\Slick.Database.dll
+C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Database\obj\Debug\netcoreapp2.1\Slick.Database.pdb

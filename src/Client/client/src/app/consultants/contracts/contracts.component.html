@@ -1,0 +1,27 @@
+<div class=e-div>
+  <div *ngFor="let contract of contracts" class="e-div__contract">
+    <h1>Contract</h1>
+    <label class=e-div__label>start datum</label>
+    <label class="e-div__datalabel">{{contract.startDate}}</label>
+    <label class=e-div__label>eind datum</label>
+    <label class="e-div__datalabel">{{contract.endDate}}</label>
+    <label class=e-div__label>view document</label>
+    <a class="e-div__datalabel" target="_blank" href="contract.documentUrl">{{contract.documentUrl}}</a>
+    <label class=e-div__label>Salaris</label>
+    <label class="e-div__datalabel">{{contract.salary}}</label>
+    <label class=e-div__label>datum ondertekend</label>
+    <label class="e-div__datalabel">{{contract.signedDate}}</label>
+    </div>
+
+  <div class="e-div__buttons">
+    <label class="e-div__back" (click)="goBack()">
+      <i class="fas fa-arrow-circle-left"></i>
+    </label>
+
+    <label class="e-div__back" (click)="goBacktoMenu()">
+      <i class="fas fa-list"> </i>
+      </label>
+  </div>
+  </div>
+
+

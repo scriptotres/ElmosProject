@@ -1,0 +1,74 @@
+<div class=e-div *ngIf="consultant">
+
+  <div class="e-div__details">
+    <h1>Info</h1>
+    <label class=e-div__label for="fistname">Voornaam</label>
+    <input class=e-div__input id="firstname" name="firstname" type="text" [(ngModel)]="consultant.firstname" />
+    <label class=e-div__label for="lastname">Achternaam</label>
+    <input class=e-div__input id="lastname" name="lastname" type="text" [(ngModel)]="consultant.lastname" />
+    <label class=e-div__label for="email">Email</label>
+    <input class=e-div__input id="email" name="email" type="text" [(ngModel)]="consultant.email" />
+    <label class=e-div__label for="workemail">Werk Email</label>
+    <input class=e-div__input id="workemail" name="workemail" type="text" [(ngModel)]="consultant.workEmail" />
+    <label class=e-div__label for="birthdate">Geboortedatum</label>
+    <input class=e-div__input id="birthdate" name="birthdate" type="datetime-local" [(ngModel)]="consultant.birthdate" />
+    <label class=e-div__label for="mobile">Gsm Nummer</label>
+    <input class=e-div__input id="mobile" name="mobile" type="text" [(ngModel)]="consultant.mobile" />
+    <label class=e-div__label for="telephone">Telefoon Nummer</label>
+    <input class=e-div__input id="telephone" name="telephone" type="text" [(ngModel)]="consultant.telephone" />
+  </div>
+
+
+  <div class="e-div__address">
+    <h1>Address</h1>
+    <label class=e-div__label for="street">Straat</label>
+    <input class=e-div__input id="street" name="street" type="text" [(ngModel)]="consultant.street" />
+
+    <label class=e-div__label for="number">Nr.</label>
+    <input class=e-div__input name="number" type="text" [(ngModel)]="consultant.number" />
+
+    <label class=e-div__label for="city">Stad/Gemeente</label>
+    <input class=e-div__input id="city" name="city" type="text" [(ngModel)]="consultant.city" />
+
+    <label class=e-div__label for="zip">Post Code</label>
+    <input class=e-div__input id="zip" name="zip" type="text" [(ngModel)]="consultant.zip" />
+
+    <label class=e-div__label for="country">Land</label>
+    <input class=e-div__input id="country" name="country" type="text"[(ngModel)]="consultant.country"  />
+  </div>
+
+  <div class="e-div__currentcontract">
+    <h1>Current Contract</h1>
+    <label class=e-div__label for="startdate">start datum</label>
+    <input class=e-div__input name="startdate" type="datetime-local" [(ngModel)]="consultant.currentContract.startDate" />
+
+    <label class=e-div__label for="enddate">eind datum</label>
+    <input class=e-div__input id="enddate" name="enddate" type="datetime-local" [(ngModel)]="consultant.currentContract.endDate"  />
+
+    <label class=e-div__label for="documentUrl">view document</label>
+    <input class=e-div__input id="documentUrl" name="documentUrl" type="text" [(ngModel)]="consultant.currentContract.documentUrl" />
+    TODO documenturl
+    <label class=e-div__label for="salary">Salaris</label>
+    <input class=e-div__input id="salary" name="salary" type="text" [(ngModel)]="consultant.currentContract.salary" />
+
+    <label class=e-div__label for="signedDate">datum ondertekend</label>
+    <input class=e-div__input id="signedDate" name="signedDate" type="datetime-local"  [(ngModel)]="consultant.currentContract.signedDate"/>
+    <button (click)="viewContracts()" class="e-div__contractbutton">bekijk alle contracten</button>
+  </div>
+
+  <div class="e-div__buttons">
+    <label class="e-div__edit" (click)="updateConsultant()">
+      <i class="far fa-save"></i>
+    </label>
+    <label class="e-div__delete" (click)="deleteConsultant()">
+      <i class="fas fa-user-minus"></i>
+    </label>
+  </div>
+</div>
+
+
+
+
+
+
+

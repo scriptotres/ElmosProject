@@ -1,0 +1,28 @@
+.e-items{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.e-nav{
+    background-color: #369;
+    display: flex;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    order:1;
+    justify-content:flex-end;
+
+    
+}
+.e-nav :hover
+    {
+        color: bisque;
+    }
+
+
+.e-nav a
+{
+   padding: 0 10px 0 0 ;
+   text-decoration: none;
+  text-transform: uppercase;
+  color: azure;
+}

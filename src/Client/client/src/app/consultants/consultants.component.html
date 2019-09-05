@@ -1,0 +1,31 @@
+<table class="e-table">
+  <thead class="e-thead">
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Email</th>
+      <th>Work Mail</th>
+      <th>Birthday</th>
+      <th>GSM Nummer</th>
+      <th>Telephone nr</th>
+    </tr>
+  </thead>
+  <tbody class="e-tbody">
+    <ng-container *ngFor="let consultant of consultants;">
+      <tr>
+        <td>{{consultant.firstname}}</td>
+
+        <td>{{consultant.lastname}}</td>
+        <td>{{consultant.email}}</td>
+        <td>{{consultant.workEmail}}</td>
+        <td>{{consultant.birthdate}}</td>
+        <td>{{consultant.mobile}}</td>
+        <td>{{consultant.telephone}}</td>
+        <td class="e-edit__image" (click)="goToDetails(consultant)">  
+  <i class="far fa-edit"></i>
+</td>
+
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

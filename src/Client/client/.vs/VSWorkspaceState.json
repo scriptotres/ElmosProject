@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\consultants",
+    "\\src\\app\\consultants\\contracts",
+    "\\src\\app\\models",
+    "\\src\\app\\scss",
+    "\\src\\app\\scss\\elements",
+    "\\src\\app\\scss\\generic",
+    "\\src\\app\\scss\\settings"
+  ],
+  "PreviewInSolutionExplorer": false
+}

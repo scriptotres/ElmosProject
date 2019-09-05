@@ -1,0 +1,191 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj",
+        "projectName": "Slick.Database",
+        "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj",
+        "packagesPath": "C:\\Users\\Elmos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Database\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Elmos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj": {
+                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj",
+        "projectName": "Slick.Models",
+        "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj",
+        "packagesPath": "C:\\Users\\Elmos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Elmos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj",
+        "projectName": "Slick.Repositories",
+        "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj",
+        "packagesPath": "C:\\Users\\Elmos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Repositories\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Elmos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj": {
+                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj"
+              },
+              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj": {
+                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

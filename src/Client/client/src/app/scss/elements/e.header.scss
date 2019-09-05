@@ -1,0 +1,36 @@
+@import '../../scss/settings/s.colors.scss';
+@import '../../scss/settings/s.dimensions.scss';
+
+.e-header {
+  background: linear-gradient(90deg,$parking-default-start-color,$parking-default-end-color);
+  color: white;
+  padding: 20px;
+  margin: auto;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.e-header__title {
+  margin: 0 0 0 15px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.e-nav {
+  display: flex;
+  font-size: 13px;
+  order: 1;
+  justify-content: flex-end;
+}
+
+.e-nav :hover {
+  color: bisque;
+}
+
+
+.e-nav a {
+  padding: 0 10px 0 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: azure;
+}

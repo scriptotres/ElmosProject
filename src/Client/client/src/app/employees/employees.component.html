@@ -1,0 +1,23 @@
+<table class="e-table">
+  <thead class="e-thead">
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Email</th>
+      <th>Birthday</th>
+      <th>Telephone nr</th>
+    </tr>
+  </thead>
+  <tbody class="e-tbody">
+    <ng-container *ngFor="let employee of employees;">
+      <tr>
+        <td>  {{employee.firstname}}</td>
+        <td>  {{employee.lastname}}</td>
+        <td>  {{employee.email}}</td>
+        <td>  {{employee.birthdate}}</td>
+        <td>  {{employee.telephone}}</td>
+
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

@@ -1,0 +1,38 @@
+@import '../scss/settings/s.colors.scss';
+
+.e-thead{
+  padding-top:40px;
+  width:100%;
+}
+.e-table {
+  width: 100%;
+  position: center;
+
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 3px solid $parking-default-end-color;
+}
+
+td,tr {
+  color: $parking-default-end-color;
+}
+
+.far {
+  font-size: 30px;
+  color: $parking-default-end-color;
+}
+
+td:last-child
+{
+  border:none;
+
+}
+
+.far:hover {
+  cursor: pointer;
+}
+
+
+
