@@ -10,7 +10,8 @@ namespace Slick.Models.Contracts
     {
         public Guid ContractTypeId { get; set; }
         public virtual ContractType ContractType { get; set; }
-        public Guid ContractId { get; set; }
+        public Guid ConsultantId { get; set; }
+
         public virtual Consultant Consultant { get; set; }
 
         [Required]
@@ -20,7 +21,6 @@ namespace Slick.Models.Contracts
 
         public string DocumentUrl { get; set; }
         public decimal Salary { get; set; }
-        public Guid ConsultantId { get; set; }
 
         public override string ToString()
         {

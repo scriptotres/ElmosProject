@@ -78,3 +78,43 @@ C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Api\obj\
 C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Slick.Api.csproj.CopyComplete
 C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Slick.Api.dll
 C:\Users\Elmos\Desktop\Oefeningen\DataManagement\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Slick.Api.pdb
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\bin\Debug\netcoreapp2.2\Slick.Api.deps.json
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\bin\Debug\netcoreapp2.2\Slick.Api.runtimeconfig.json
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\bin\Debug\netcoreapp2.2\Slick.Api.runtimeconfig.dev.json
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\bin\Debug\netcoreapp2.2\Slick.Api.dll
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\bin\Debug\netcoreapp2.2\Slick.Api.pdb
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\bin\Debug\netcoreapp2.2\Slick.Api.Views.dll
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\bin\Debug\netcoreapp2.2\Slick.Api.Views.pdb
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\bin\Debug\netcoreapp2.2\Slick.Database.dll
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\bin\Debug\netcoreapp2.2\Slick.Models.dll
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\bin\Debug\netcoreapp2.2\Slick.Repositories.dll
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\bin\Debug\netcoreapp2.2\Slick.Services.dll
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\bin\Debug\netcoreapp2.2\Slick.Database.pdb
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\bin\Debug\netcoreapp2.2\Slick.Models.pdb
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\bin\Debug\netcoreapp2.2\Slick.Repositories.pdb
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\bin\Debug\netcoreapp2.2\Slick.Services.pdb
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Slick.Api.csprojAssemblyReference.cache
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Slick.Api.csproj.CoreCompileInputs.cache
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Slick.Api.RazorAssemblyInfo.cache
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Slick.Api.RazorAssemblyInfo.cs
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Slick.Api.AssemblyInfoInputs.cache
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Slick.Api.AssemblyInfo.cs
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Slick.Api.TagHelpers.input.cache
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Slick.Api.TagHelpers.output.cache
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Slick.Api.RazorCoreGenerate.cache
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Slick.Api.RazorTargetAssemblyInfo.cache
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Slick.Api.RazorTargetAssemblyInfo.cs
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Slick.Api.Views.pdb
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Slick.Api.csproj.CopyComplete
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Slick.Api.dll
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Api\obj\Debug\netcoreapp2.2\Slick.Api.pdb

@@ -9,3 +9,14 @@ C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Mod
 C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Models\obj\Debug\netcoreapp2.2\Slick.Models.AssemblyInfo.cs
 C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Models\obj\Debug\netcoreapp2.2\Slick.Models.dll
 C:\Users\Elmos\Desktop\Oefeningen\Elmos training\Dag5\src\server\Slick\Slick.Models\obj\Debug\netcoreapp2.2\Slick.Models.pdb
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Models\bin\Debug\netcoreapp2.2\Slick.Models.deps.json
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Models\bin\Debug\netcoreapp2.2\Slick.Models.runtimeconfig.json
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Models\bin\Debug\netcoreapp2.2\Slick.Models.runtimeconfig.dev.json
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Models\bin\Debug\netcoreapp2.2\Slick.Models.dll
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Models\bin\Debug\netcoreapp2.2\Slick.Models.pdb
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Models\obj\Debug\netcoreapp2.2\Slick.Models.csprojAssemblyReference.cache
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Models\obj\Debug\netcoreapp2.2\Slick.Models.csproj.CoreCompileInputs.cache
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Models\obj\Debug\netcoreapp2.2\Slick.Models.AssemblyInfoInputs.cache
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Models\obj\Debug\netcoreapp2.2\Slick.Models.AssemblyInfo.cs
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Models\obj\Debug\netcoreapp2.2\Slick.Models.dll
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Models\obj\Debug\netcoreapp2.2\Slick.Models.pdb

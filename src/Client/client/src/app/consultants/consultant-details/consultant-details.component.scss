@@ -1,6 +1,6 @@
 @import '../../scss/settings/s.colors.scss';
 h1 {
-  color: $parking-default-end-color;
+  color: $color-default-end-color;
 }
 .e-div {
   display: flex;
@@ -12,15 +12,15 @@ h1 {
  
 }
 
-.e-div__address,.e-div__details,.e-div__currentcontract {
+.e-div__address, .e-div__details, .e-div__currentcontract {
   border-radius: 7px;
-  border: 2px solid $parking-default-end-color;
+  border: 2px solid $color-default-end-color;
   padding: 7px;
   width: 250px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-right:50px;
+  margin-right: 50px;
 }
 
 .e-div__input {
@@ -35,12 +35,11 @@ h1 {
  
 }
 .e-div__label {
-  color: $parking-default-end-color;
+  color: $color-default-end-color;
 }
-.e-div__buttons{
- 
+.e-div__buttons {
   font-size: 50px;
-  color: $parking-default-end-color;
+  color: $color-default-end-color;
   order: 1;
   align-self: flex-end;
 }
@@ -52,14 +51,14 @@ h1 {
 }
 
 .e-div__contractbutton {
-  background-color: $parking-default-end-color;
+  background-color: $color-default-end-color;
   border-radius: 30px;
   color: azure;
-  height:50px;
-  align-content:center;
-  margin-top:15px;
+  height: 50px;
+  align-content: center;
+  margin-top: 15px;
 }
-.e-div__contractbutton:hover{
+.e-div__contractbutton:hover, .e-div__delete {
   cursor:pointer
 }
 

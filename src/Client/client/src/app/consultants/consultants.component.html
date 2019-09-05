@@ -1,3 +1,7 @@
+<div class="e-div__search">
+<label>filter op achternaam</label>
+<input class="e-div__searchinput" type="text" [(ngModel)]="searchLastname" />
+</div>
 <table class="e-table">
   <thead class="e-thead">
     <tr>
@@ -11,7 +15,7 @@
     </tr>
   </thead>
   <tbody class="e-tbody">
-    <ng-container *ngFor="let consultant of consultants;">
+    <ng-container *ngFor="let consultant of consultants | filter:searchLastname">
       <tr>
         <td>{{consultant.firstname}}</td>
 
@@ -21,9 +25,9 @@
         <td>{{consultant.birthdate}}</td>
         <td>{{consultant.mobile}}</td>
         <td>{{consultant.telephone}}</td>
-        <td class="e-edit__image" (click)="goToDetails(consultant)">  
-  <i class="far fa-edit"></i>
-</td>
+        <td class="e-edit__image" (click)="goToDetails(consultant)">
+          <i class="far fa-edit"></i>
+        </td>
 
       </tr>
     </ng-container>

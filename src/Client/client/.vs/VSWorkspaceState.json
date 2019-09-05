@@ -3,13 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\accounts",
     "\\src\\app\\consultants",
-    "\\src\\app\\consultants\\contracts",
-    "\\src\\app\\models",
+    "\\src\\app\\consultants\\consultant-details",
     "\\src\\app\\scss",
-    "\\src\\app\\scss\\elements",
     "\\src\\app\\scss\\generic",
-    "\\src\\app\\scss\\settings"
+    "\\src\\app\\scss\\settings",
+    "\\src\\app\\services"
   ],
+  "SelectedNode": "\\src\\app\\consultants\\consultant-details\\consultant-details.component.ts",
   "PreviewInSolutionExplorer": false
 }

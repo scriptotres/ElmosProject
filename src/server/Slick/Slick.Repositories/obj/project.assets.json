@@ -3622,11 +3622,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj",
+      "projectUniqueName": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj",
       "projectName": "Slick.Repositories",
-      "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj",
+      "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj",
       "packagesPath": "C:\\Users\\Elmos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Repositories\\obj\\",
+      "outputPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Repositories\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3645,11 +3645,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj": {
-              "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj"
+            "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj": {
+              "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj"
             },
-            "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj": {
-              "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj"
+            "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj": {
+              "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj"
             }
           }
         }

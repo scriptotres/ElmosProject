@@ -28,6 +28,8 @@ namespace Slick.Api
             service.AddTransient<IEntityRepository<Employee>, EntityRepository<Employee>>();
             service.AddTransient<IEntityRepository<Account>, EntityRepository<Account>>();
             service.AddTransient<IEntityRepository<AccountConsultant>, EntityRepository<AccountConsultant>>();
+            service.AddTransient<IEntityRepository<Address>, EntityRepository<Address>>();
+            service.AddTransient<IEntityRepository<ContractType>, EntityRepository<ContractType>>();
 
 
         }

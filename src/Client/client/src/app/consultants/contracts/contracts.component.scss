@@ -9,22 +9,20 @@
 }
 
 h1 {
-  color: $parking-default-end-color;
+  color: $color-default-end-color;
 }
 
 
 .e-div__contract {
   min-height: 500px;
   border-radius: 7px;
-  border: 2px solid $parking-default-end-color;
+  border: 2px solid $color-default-end-color;
   padding: 7px;
   width: 300px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   margin-right: 50px;
-
-
 }
 
 
@@ -39,17 +37,13 @@ h1 {
   height: 40px;
 
 }
-
-
-
-
 .e-div__label {
-  color: $parking-default-end-color;
+  color: $color-default-end-color;
 }
 
 .e-div__buttons {
   font-size: 50px;
-  color: $parking-default-end-color;
+  color: $color-default-end-color;
   order: 1;
   align-self: flex-end;
 }

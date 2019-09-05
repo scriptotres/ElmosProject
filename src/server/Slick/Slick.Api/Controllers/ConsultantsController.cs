@@ -28,7 +28,6 @@ namespace Slick.Api.Controllers
         private readonly IConsultantService service;
         private IContractService contractService;
         private readonly ApplicationDBContext entitiesContext;
-        private Contract contracts;
 
 
         public ConsultantsController(IConsultantService service, IContractService contractService, ApplicationDBContext entitiesContext)
@@ -77,6 +76,8 @@ namespace Slick.Api.Controllers
         public IActionResult Get(Guid id)
         {
             entitiesContext.Consultants.Include(Consultant => Consultant.Address).ToList();
+            entitiesContext.Contracts.Include(contracts => contracts.ContractType).ToList();
+
             var c = service.GetById(id);
             if (c == null) return NotFound();
             var consultant = new ConslutantDto()
@@ -111,8 +112,10 @@ namespace Slick.Api.Controllers
                     DocumentUrl = cont.DocumentUrl,
                     Salary = cont.Salary,
                     SignedDate = cont.SignedDate,
-                    contractId = cont.Id,
-                    ContractType = cont.ContractType
+                    Id = cont.Id,
+                    ConsultantId=cont.ConsultantId,
+                    ContractTypeId=cont.ContractTypeId,
+                    ContractTypeTitle=cont.ContractType.Title
                 });
 
             }
@@ -130,6 +133,7 @@ namespace Slick.Api.Controllers
             return Ok(c);
         }
         [HttpDelete]
+
         public IActionResult Delete([FromBody] Consultant c)
         {
             service.Delete(c);
@@ -139,7 +143,13 @@ namespace Slick.Api.Controllers
         [HttpPut]
         public IActionResult Put(ConslutantDto cDTO)
         {
-            
+
+            var contracttype = new ContractType()
+            {
+                Title = cDTO.CurrentContract.ContractTypeTitle,
+                Id=cDTO.CurrentContract.ContractTypeId
+            };
+
             var currentcontract = new Contract()
             {
                 EndDate = cDTO.CurrentContract.EndDate,
@@ -147,14 +157,13 @@ namespace Slick.Api.Controllers
                 DocumentUrl = cDTO.CurrentContract.DocumentUrl,
                 Salary = cDTO.CurrentContract.Salary,
                 SignedDate = cDTO.CurrentContract.SignedDate,
-                Id = cDTO.CurrentContract.contractId,
-                ContractId = cDTO.CurrentContract.contractId,
-                ConsultantId=cDTO.Id, //moet dit??
-                ContractType = cDTO.CurrentContract.ContractType
-
-                //TODO Kevin: er is een contractId en een id van baseentity? database updaten dat contractid wegvalt of?
+                Id = cDTO.CurrentContract.Id,
+                ConsultantId = cDTO.Id,
+                ContractTypeId = contracttype.Id,
+                ContractType = contracttype
+                
             };
-                //geen contracten in put omdat deze niet aangepast moeten worden in de App
+            //geen contracten in put omdat deze niet aangepast moeten worden in de App
 
             var address = new Address()
             {
@@ -179,17 +188,17 @@ namespace Slick.Api.Controllers
 
                 Address = address,
                 AddressId = address.Id,
-                CurrentContract= currentcontract
 
-                //    CurrentContract=currentcontract
+                
 
 
             };
 
 
 
-            //TODO: Adress en contract saven??
+            //TODO: currentcontract saven??
             Guid id = consultant.Id;
+            contractService.Update(currentcontract);
             service.Update(consultant);
             return Ok(consultant);
         }

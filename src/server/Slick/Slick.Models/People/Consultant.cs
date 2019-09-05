@@ -28,9 +28,10 @@ namespace Slick.Models.People
                     var query = from c in this.Contracts
                                 orderby c.StartDate descending
                                 where c.EndDate >= DateTime.Now
+                                
                                 select c;
 
-                    return query.SingleOrDefault();
+                    return query.FirstOrDefault();
                 }
                 else
                     return null;

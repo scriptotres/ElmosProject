@@ -25,6 +25,7 @@ namespace Slick.Database
         public DbSet<ContractType> ContractTypes { get; set; }
         public DbSet<Consultant> Consultants { get; set; }
         public DbSet<Address> Address { get; set; }
+        public DbSet<Contract> Contracts { get; set; }
         public DbSet<Specialisation> Specialisations { get; set; }
         public DbSet<ConsultantSpecialisation> ConsultantSpecialisations { get; set; }
         public DbSet<SpecialisationLevel> SpecialisationLevel { get; set; }

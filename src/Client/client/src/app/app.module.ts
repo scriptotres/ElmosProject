@@ -11,6 +11,7 @@ import { EmployeesComponent } from './employees/employees.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConsultantDetailsComponent } from './consultants/consultant-details/consultant-details.component';
 import { ContractsComponent } from './consultants/contracts/contracts.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContractsComponent } from './consultants/contracts/contracts.component'
     AccountsComponent,
     EmployeesComponent,
     ConsultantDetailsComponent,
-    ContractsComponent
+    ContractsComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

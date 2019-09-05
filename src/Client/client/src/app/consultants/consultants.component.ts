@@ -1,12 +1,13 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { ConsultantsService } from '../services/consultants.service';
-
+import { FilterPipe } from '../filter.pipe'
 import { Router } from '@angular/router';
 import consultant from '../models/consultant';
 @Component({
   selector: 'app-conusltants',
   templateUrl: './consultants.component.html',
-  styleUrls: ['./consultants.component.scss']
+  styleUrls: ['./consultants.component.scss'],
+  providers: [FilterPipe]
 })
 
 export class ConsultantsComponent implements OnInit {

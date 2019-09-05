@@ -46,8 +46,6 @@ namespace Slick.Database.Migrations
 
                     b.Property<Guid>("ConsultantId");
 
-                    b.Property<Guid>("ContractId");
-
                     b.Property<Guid>("ContractTypeId");
 
                     b.Property<string>("DocumentUrl");
@@ -66,7 +64,7 @@ namespace Slick.Database.Migrations
 
                     b.HasIndex("ContractTypeId");
 
-                    b.ToTable("Contract");
+                    b.ToTable("Contracts");
                 });
 
             modelBuilder.Entity("Slick.Models.Contracts.ContractType", b =>

@@ -13,7 +13,10 @@ namespace Slick.Models.People
         [Required]
         public string Lastname { get; set; }
         public string Middlename { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}")]
         public DateTime Birthdate { get; set; }
+
         public Guid AddressId { get; set; }
         public virtual Address Address { get; set; }
         public bool IsDeleted { get; set; } = false;

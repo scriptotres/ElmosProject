@@ -2,7 +2,7 @@
 @import '../../scss/settings/s.dimensions.scss';
 
 .e-header {
-  background: linear-gradient(90deg,$parking-default-start-color,$parking-default-end-color);
+  background: linear-gradient(90deg,$color-default-start-color,$color-default-end-color);
   color: white;
   padding: 20px;
   margin: auto;
@@ -10,6 +10,7 @@
 }
 
 .e-header__title {
+  color: azure;
   margin: 0 0 0 15px;
   text-transform: uppercase;
   text-decoration: underline;

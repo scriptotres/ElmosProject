@@ -39,11 +39,14 @@
 
   <div class="e-div__currentcontract">
     <h1>Current Contract</h1>
+    <label class=e-div__label for="salary">Type contract</label>
+    <input class=e-div__input id="salary" name="salary" type="text" [(ngModel)]="consultant.currentContract.contractTypeTitle" />
+
     <label class=e-div__label for="startdate">start datum</label>
     <input class=e-div__input name="startdate" type="datetime-local" [(ngModel)]="consultant.currentContract.startDate" />
 
     <label class=e-div__label for="enddate">eind datum</label>
-    <input class=e-div__input id="enddate" name="enddate" type="datetime-local" [(ngModel)]="consultant.currentContract.endDate"  />
+    <input class=e-div__input id="enddate" name="enddate" type="datetime-local" [(ngModel)]="consultant.currentContract.endDate" />
 
     <label class=e-div__label for="documentUrl">view document</label>
     <input class=e-div__input id="documentUrl" name="documentUrl" type="text" [(ngModel)]="consultant.currentContract.documentUrl" />
@@ -52,7 +55,7 @@
     <input class=e-div__input id="salary" name="salary" type="text" [(ngModel)]="consultant.currentContract.salary" />
 
     <label class=e-div__label for="signedDate">datum ondertekend</label>
-    <input class=e-div__input id="signedDate" name="signedDate" type="datetime-local"  [(ngModel)]="consultant.currentContract.signedDate"/>
+    <input class=e-div__input id="signedDate" name="signedDate" type="datetime-local" [(ngModel)]="consultant.currentContract.signedDate" />
     <button (click)="viewContracts()" class="e-div__contractbutton">bekijk alle contracten</button>
   </div>
 

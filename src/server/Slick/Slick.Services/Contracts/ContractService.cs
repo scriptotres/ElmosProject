@@ -9,10 +9,12 @@ namespace Slick.Services.Contracts
     public class ContractService : IContractService
     {
         private readonly IEntityRepository<Models.Contracts.Contract> repo;
+        private readonly IEntityRepository<ContractType> typerepo;
 
-        public ContractService(IEntityRepository<Models.Contracts.Contract> repo)
+        public ContractService(IEntityRepository<Models.Contracts.Contract> repo,IEntityRepository<ContractType> typerepo)
         {
             this.repo = repo;
+            this.typerepo = typerepo;
         }
         public Models.Contracts.Contract Add(Models.Contracts.Contract c)
         {
@@ -45,6 +47,14 @@ namespace Slick.Services.Contracts
 
         public void Update(Models.Contracts.Contract c)
         {
+            var type = c.ContractType;
+            var t = new ContractType()
+            {
+                Id = type.Id,
+                Title = type.Title
+            };
+
+            typerepo.Update(t);
             repo.Update(c);
         }
     }

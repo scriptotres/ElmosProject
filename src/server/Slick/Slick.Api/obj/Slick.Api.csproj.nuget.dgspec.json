@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Api\\Slick.Api.csproj": {}
+    "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Api\\Slick.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Api\\Slick.Api.csproj": {
+    "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Api\\Slick.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Api\\Slick.Api.csproj",
+        "projectUniqueName": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Api\\Slick.Api.csproj",
         "projectName": "Slick.Api",
-        "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Api\\Slick.Api.csproj",
+        "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Api\\Slick.Api.csproj",
         "packagesPath": "C:\\Users\\Elmos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Api\\obj\\",
+        "outputPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,17 +30,17 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj": {
-                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj"
+              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj": {
+                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj"
               },
-              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj": {
-                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj"
+              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj": {
+                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj"
               },
-              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj": {
-                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj"
+              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj": {
+                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj"
               },
-              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Services\\Slick.Services.csproj": {
-                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Services\\Slick.Services.csproj"
+              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Services\\Slick.Services.csproj": {
+                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Services\\Slick.Services.csproj"
               }
             }
           }
@@ -92,14 +92,14 @@
         }
       }
     },
-    "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj": {
+    "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj",
+        "projectUniqueName": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj",
         "projectName": "Slick.Database",
-        "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj",
+        "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj",
         "packagesPath": "C:\\Users\\Elmos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Database\\obj\\",
+        "outputPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Database\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -118,8 +118,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj": {
-                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj"
+              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj": {
+                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj"
               }
             }
           }
@@ -160,14 +160,14 @@
         }
       }
     },
-    "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj": {
+    "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj",
         "projectName": "Slick.Models",
-        "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj",
+        "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj",
         "packagesPath": "C:\\Users\\Elmos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\obj\\",
+        "outputPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -216,14 +216,14 @@
         }
       }
     },
-    "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj": {
+    "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj",
         "projectName": "Slick.Repositories",
-        "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj",
+        "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj",
         "packagesPath": "C:\\Users\\Elmos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Repositories\\obj\\",
+        "outputPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -242,11 +242,11 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj": {
-                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj"
+              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj": {
+                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Database\\Slick.Database.csproj"
               },
-              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj": {
-                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj"
+              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj": {
+                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj"
               }
             }
           }
@@ -275,14 +275,14 @@
         }
       }
     },
-    "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Services\\Slick.Services.csproj": {
+    "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Services\\Slick.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Services\\Slick.Services.csproj",
+        "projectUniqueName": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Services\\Slick.Services.csproj",
         "projectName": "Slick.Services",
-        "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Services\\Slick.Services.csproj",
+        "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Services\\Slick.Services.csproj",
         "packagesPath": "C:\\Users\\Elmos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Services\\obj\\",
+        "outputPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -301,11 +301,11 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj": {
-                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj"
+              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj": {
+                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj"
               },
-              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj": {
-                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj"
+              "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj": {
+                "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Repositories\\Slick.Repositories.csproj"
               }
             }
           }

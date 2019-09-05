@@ -3106,11 +3106,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj",
+      "projectUniqueName": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj",
       "projectName": "Slick.Models",
-      "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj",
+      "projectPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Models\\Slick.Models.csproj",
       "packagesPath": "C:\\Users\\Elmos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\DataManagement\\src\\server\\Slick\\Slick.Models\\obj\\",
+      "outputPath": "C:\\Users\\Elmos\\Desktop\\Oefeningen\\Data Management\\src\\server\\Slick\\Slick.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

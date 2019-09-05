@@ -38,12 +38,13 @@ namespace Slick.Api.Dtos
                                 where c?.EndDate >= DateTime.Now
                                 select c;
 
-                    return query.SingleOrDefault();
+                    return query.FirstOrDefault();
                 }
                 else
                     return null;
             }
             set { }
         }
+        
     }
 }

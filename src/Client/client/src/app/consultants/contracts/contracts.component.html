@@ -1,6 +1,8 @@
 <div class=e-div>
   <div *ngFor="let contract of contracts" class="e-div__contract">
     <h1>Contract</h1>
+    <label class=e-div__label>contract type</label>
+    <label class="e-div__datalabel">{{contract.contractTypeTitle}}</label>
     <label class=e-div__label>start datum</label>
     <label class="e-div__datalabel">{{contract.startDate}}</label>
     <label class=e-div__label>eind datum</label>
@@ -11,7 +13,7 @@
     <label class="e-div__datalabel">{{contract.salary}}</label>
     <label class=e-div__label>datum ondertekend</label>
     <label class="e-div__datalabel">{{contract.signedDate}}</label>
-    </div>
+  </div>
 
   <div class="e-div__buttons">
     <label class="e-div__back" (click)="goBack()">
