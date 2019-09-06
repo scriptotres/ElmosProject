@@ -5,6 +5,8 @@ import { ConsultantsService } from '../../services/consultants.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Location } from '@angular/common';
+import { error } from 'util';
+import { HttpErrorResponse } from '@angular/common/http';
 
 
 @Component({
@@ -16,7 +18,7 @@ export class ConsultantDetailsComponent implements OnInit {
   @Input() consultant: consultant;
   editForm: FormGroup;
 
-  constructor(private consultantservice: ConsultantsService, private route: ActivatedRoute, private location: Location, private router: Router ) {
+  constructor(private consultantservice: ConsultantsService, private route: ActivatedRoute, private location: Location, private router: Router) {
     //this.editForm = this.formBuilder.group({
     //  firstname: [''],
     //  lastname: [''],
@@ -43,13 +45,12 @@ export class ConsultantDetailsComponent implements OnInit {
 
     this.consultantservice.getConsultant(id)
       .subscribe(c => this.consultant = c);
-    console.log(this.consultant);
   }
-  
+
 
   deleteConsultant(): void {
-  
-    if (confirm(`ben je zeker dat je consultant ${this.consultant.firstname} ${this.consultant.lastname} wilt verwijderen?` )) {
+
+    if (confirm(`ben je zeker dat je consultant ${this.consultant.firstname} ${this.consultant.lastname} wilt verwijderen?`)) {
       let id = this.route.snapshot.paramMap.get('id');
       this.consultant.id = id;
       this.consultantservice.deleteConsultant(this.consultant)
@@ -61,12 +62,17 @@ export class ConsultantDetailsComponent implements OnInit {
     let id = this.route.snapshot.paramMap.get('id');
     this.consultant.id = id;
     this.consultantservice.updateConsultant(this.consultant)
-      .subscribe(() => this.goBack());
-  }
+      .subscribe((data) => {
+        console.log(data);
+        this.goBack();
+      }, (err: HttpErrorResponse) => {
+        console.log(err.message);
+      });
+        }
 
   viewContracts() {
     let id = this.route.snapshot.paramMap.get('id');
-   
+
     this.router.navigateByUrl('consultants/contracts/' + id);
   }
 

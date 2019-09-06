@@ -43,7 +43,7 @@ namespace Slick.Api.Controllers
         // -->       ?sort=lastname&filter=lastname&value=de%20bielde
         [HttpGet]
         [AllowAnonymous]
-        public IActionResult Get([FromQuery]string sort, [FromQuery] string filter, [FromQuery] string value)
+        public IActionResult Get([FromQuery]string sort)
         {
             IList<ConslutantDto> consultants = new List<ConslutantDto>();
             IEnumerable<Consultant> consultantsfromDB = new List<Consultant>();
@@ -113,9 +113,9 @@ namespace Slick.Api.Controllers
                     Salary = cont.Salary,
                     SignedDate = cont.SignedDate,
                     Id = cont.Id,
-                    ConsultantId=cont.ConsultantId,
-                    ContractTypeId=cont.ContractTypeId,
-                    ContractTypeTitle=cont.ContractType.Title
+                    ConsultantId = cont.ConsultantId,
+                    ContractTypeId = cont.ContractTypeId,
+                    ContractTypeTitle = cont.ContractType.Title
                 });
 
             }
@@ -144,26 +144,32 @@ namespace Slick.Api.Controllers
         public IActionResult Put(ConslutantDto cDTO)
         {
 
-            var contracttype = new ContractType()
-            {
-                Title = cDTO.CurrentContract.ContractTypeTitle,
-                Id=cDTO.CurrentContract.ContractTypeId
-            };
 
-            var currentcontract = new Contract()
+
+            IList<Contract> contract = new List<Contract>();
+
+            foreach (var contr in cDTO.Contracts)
             {
-                EndDate = cDTO.CurrentContract.EndDate,
-                StartDate = cDTO.CurrentContract.StartDate,
-                DocumentUrl = cDTO.CurrentContract.DocumentUrl,
-                Salary = cDTO.CurrentContract.Salary,
-                SignedDate = cDTO.CurrentContract.SignedDate,
-                Id = cDTO.CurrentContract.Id,
-                ConsultantId = cDTO.Id,
-                ContractTypeId = contracttype.Id,
-                ContractType = contracttype
-                
-            };
-            //geen contracten in put omdat deze niet aangepast moeten worden in de App
+                var contracttype = new ContractType()
+                {
+                    Title = contr.ContractTypeTitle,
+                    Id = contr.ContractTypeId
+                };
+                contract.Add(new Contract
+                {
+
+                    EndDate = contr.EndDate,
+                    StartDate = contr.StartDate,
+                    DocumentUrl = contr.DocumentUrl,
+                    Salary = contr.Salary,
+                    SignedDate = contr.SignedDate,
+                    Id = contr.Id,
+                    ConsultantId = cDTO.Id,
+                    ContractTypeId = contracttype.Id,
+                    ContractType = contracttype
+
+                });
+            }
 
             var address = new Address()
             {
@@ -189,7 +195,7 @@ namespace Slick.Api.Controllers
                 Address = address,
                 AddressId = address.Id,
 
-                
+                Contracts = contract
 
 
             };
@@ -198,9 +204,9 @@ namespace Slick.Api.Controllers
 
             //TODO: currentcontract saven??
             Guid id = consultant.Id;
-            contractService.Update(currentcontract);
+            //   contractService.Update(currentcontract);
             service.Update(consultant);
-            return Ok(consultant);
+            return Ok(cDTO);
         }
 
         //[HttpGet]

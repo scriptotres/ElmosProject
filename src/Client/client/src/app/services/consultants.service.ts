@@ -56,7 +56,8 @@ export class ConsultantsService {
   }
 
   updateConsultant(consultant: consultant): Observable<any> {
-    
+    console.log(consultant);
+    this.httpOptions.body = consultant;
     return this.http.put(this.consultantsurl, consultant, this.httpOptions);
   }
    
@@ -64,8 +65,6 @@ export class ConsultantsService {
     this.httpOptions.body = consultant;
     return this.http.delete<consultant>(this.consultantsurl, this.httpOptions).pipe()
   }
-
-
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),

@@ -11,22 +11,23 @@ using Slick.Database;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore;
 using Slick.Models.Contracts;
+using Slick.Services.Contracts;
 
 namespace Slick.Services.People
 {
     public class ConsultantsService : IConsultantService
     {
         private readonly IEntityRepository<Consultant> repo;
-        private readonly IEntityRepository<Contract> contractrepo;
+        private readonly IContractService contractService;
         private IEntityRepository<Address> addrRepo;
 
 
 
-        public ConsultantsService(IEntityRepository<Consultant> repo, IEntityRepository<Address> adrrepo,IEntityRepository<Contract> contractrepo)
+        public ConsultantsService(IEntityRepository<Consultant> repo, IEntityRepository<Address> adrrepo, IContractService contractService)
         {
             this.addrRepo = adrrepo;
             this.repo = repo;
-            this.contractrepo = contractrepo;
+            this.contractService = contractService;
         }
         public Consultant Add(Consultant c)
         {
@@ -64,18 +65,7 @@ namespace Slick.Services.People
 
         public void Update(Consultant obj)
         {
-            //var cc = new Contract()
-            //{ DocumentUrl = currentcontract.DocumentUrl,
-            //    Id = currentcontract.Id,
-            //    EndDate = currentcontract.EndDate,
-            //    Salary = currentcontract.Salary,
-            //    SignedDate = currentcontract.SignedDate,
-            //    StartDate = currentcontract.StartDate,
-            //    Consultant = obj,
-            //    ConsultantId = currentcontract.ConsultantId,
-            //    ContractType = currentcontract.ContractType,
-            //    ContractTypeId = currentcontract.ContractTypeId
-            //};
+
             var address = obj.Address;
             var a = new Address()
             {
@@ -83,25 +73,26 @@ namespace Slick.Services.People
                 Number = address.City,
                 Street = address.Street,
                 Zip = address.Zip,
-                Id = address.Id
+                Id = address.Id,
+                Country=address.Country
             };
 
-            //var currentcontract = obj.CurrentContract;
-            //var cc = new Contract()
-            //{
-            //    DocumentUrl = currentcontract.DocumentUrl,
-            //    Id = currentcontract.Id,
-            //    EndDate = currentcontract.EndDate,
-            //    Salary = currentcontract.Salary,
-            //    SignedDate = currentcontract.SignedDate,
-            //    StartDate = currentcontract.StartDate,
-            //    Consultant = obj,
-            //    ConsultantId = currentcontract.ConsultantId,
-            //    ContractType = currentcontract.ContractType,
-            //    ContractTypeId = currentcontract.ContractTypeId
-            //};
+            var currentcontract = obj.CurrentContract;
+            var cc = new Contract()
+            {
+                DocumentUrl = currentcontract.DocumentUrl,
+                Id = currentcontract.Id,
+                EndDate = currentcontract.EndDate,
+                Salary = currentcontract.Salary,
+                SignedDate = currentcontract.SignedDate,
+                StartDate = currentcontract.StartDate,
+                Consultant = obj,
+                ConsultantId = currentcontract.ConsultantId,
+                ContractType = currentcontract.ContractType,
+                ContractTypeId = currentcontract.ContractTypeId
+            };
 
-            //contractrepo.Update(cc);
+            contractService.Update(cc);
             addrRepo.Update(a);
             repo.Update(obj);
         }
