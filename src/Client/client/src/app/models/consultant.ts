@@ -1,3 +1,5 @@
+import employee from './employee';
+
 export default class consultant {
   constructor(
     public id: any,
@@ -17,6 +19,8 @@ export default class consultant {
     public city: string,
     public zip: any,
     public country: string,
+
+    public employeeId:any,
     public currentContract: {
       endDate: any,
       startDate: any,
@@ -36,6 +40,16 @@ export default class consultant {
       contractTypeTitle:string
 
     }
+    //public employee: {
+    //  firstname: employee["firstname"],
+    //  lastname: employee["lastname"],
+    //  id: employee["id"]
+
+      //public employee: {
+      //  firstname:string,
+      //  lastname: string,
+      //  id: any
+    
 
   ) { }
 

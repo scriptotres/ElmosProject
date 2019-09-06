@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { Location } from '@angular/common';
 import { error } from 'util';
 import { HttpErrorResponse } from '@angular/common/http';
+import { EmployeesService } from '../../services/employees.service';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class ConsultantDetailsComponent implements OnInit {
   @Input() consultant: consultant;
   editForm: FormGroup;
 
-  constructor(private consultantservice: ConsultantsService, private route: ActivatedRoute, private location: Location, private router: Router) {
+  constructor(private employeeservice: EmployeesService, private consultantservice: ConsultantsService, private route: ActivatedRoute, private location: Location, private router: Router) {
     //this.editForm = this.formBuilder.group({
     //  firstname: [''],
     //  lastname: [''],
@@ -38,16 +39,24 @@ export class ConsultantDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.getConsultant();
+    this.getEmployees();
   }
+  public employees: any;
+
 
   getConsultant(): void {
     const id = this.route.snapshot.paramMap.get('id');
 
     this.consultantservice.getConsultant(id)
-      .subscribe(c => this.consultant = c);
+      .subscribe(c => [this.consultant = c, console.log(this.consultant)]);
   }
 
-
+  getEmployees(): void {
+    this.employeeservice.loadEmployees()
+      .subscribe(e => [this.employees = e,
+      console.log(this.employees)
+      ]);
+  }
   deleteConsultant(): void {
 
     if (confirm(`ben je zeker dat je consultant ${this.consultant.firstname} ${this.consultant.lastname} wilt verwijderen?`)) {
@@ -68,14 +77,18 @@ export class ConsultantDetailsComponent implements OnInit {
       }, (err: HttpErrorResponse) => {
         console.log(err.message);
       });
-        }
-
-  viewContracts() {
-    let id = this.route.snapshot.paramMap.get('id');
-
-    this.router.navigateByUrl('consultants/contracts/' + id);
   }
 
+  viewContracts() {
+
+    const id = this.route.snapshot.paramMap.get('id');
+    this.router.navigateByUrl('consultants/contracts/' + id);
+  }
+  viewEmployees() {
+    const id = this.route.snapshot.paramMap.get('id');
+
+    this.router.navigateByUrl('consultants/employees/' + id);
+  }
   goBack(): void {
     this.location.back();
   }

@@ -37,8 +37,9 @@ export class ConsultantsService {
             c.address.city,
             c.address.country,
             c.address.zip,
+            c.employeeId,
             c.currentContract,
-            c.contracts
+            c.contracts,
 
           );
 
@@ -60,7 +61,14 @@ export class ConsultantsService {
     this.httpOptions.body = consultant;
     return this.http.put(this.consultantsurl, consultant, this.httpOptions);
   }
-   
+
+  updateEmployee(consultant: consultant): Observable<any> {
+    console.log(consultant);
+    this.httpOptions.body = consultant;
+    return this.http.put(this.consultantsurl, consultant, this.httpOptions);
+  }
+
+
   deleteConsultant(consultant: consultant): Observable<any> {
     this.httpOptions.body = consultant;
     return this.http.delete<consultant>(this.consultantsurl, this.httpOptions).pipe()

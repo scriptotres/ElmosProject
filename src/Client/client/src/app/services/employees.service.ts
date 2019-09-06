@@ -27,7 +27,7 @@ export class EmployeesService {
 
           employees.push(newE);
         }
-        console.log(employees);
+//      console.log(employees);
         return employees;
 
       }));

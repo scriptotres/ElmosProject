@@ -1,6 +1,6 @@
 export default class employee {
   constructor(
-    public id: number,
+    public id: any,
     public firstname: string,
     public lastname: string,
     public middlename: string,

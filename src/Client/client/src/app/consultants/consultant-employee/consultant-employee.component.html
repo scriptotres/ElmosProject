@@ -1,0 +1,23 @@
+<div class=e-div>
+  <div *ngFor="let employee of employees" class="e-div__contract">
+    <h1>{{employee.firstname}} {{employee.lastname}}</h1>
+    <label class=e-div__label>Email</label>
+    <label class="e-div__datalabel">{{employee.email}}</label>
+    <label class=e-div__label>Telefoonnummer</label>
+    <label class="e-div__datalabel">{{employee.telephone}}</label>
+    <button (click)="selectEmployee(employee.id)" class="e-div__employeebutton">selecteer deze accountmanager</button>
+
+  </div>
+
+  <div class="e-div__buttons">
+    <label class="e-div__back" (click)="goBack()">
+      <i class="fas fa-arrow-circle-left"></i>
+    </label>
+
+    <label class="e-div__back" (click)="goBacktoMenu()">
+      <i class="fas fa-list"> </i>
+    </label>
+  </div>
+</div>
+
+

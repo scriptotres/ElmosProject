@@ -13,7 +13,8 @@ namespace Slick.Api.Dtos
         public string Lastname { get; set; }
         public DateTime Birthdate { get; set; }
         public Guid AddressId { get; set; }
-
+        public Guid EmployeeId { get; set; }
+        public EmployeeDto Employee { get; set; }
         public string Street { get; set; }
         public string Number { get; set; }
         public string City { get; set; }

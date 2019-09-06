@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConsultantDetailsComponent } from './consultants/consultant-details/consultant-details.component';
 import { ContractsComponent } from './consultants/contracts/contracts.component';
 import { FilterPipe } from './filter.pipe';
+import { ConsultantEmployeeComponent } from './consultants/consultant-employee/consultant-employee.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FilterPipe } from './filter.pipe';
     EmployeesComponent,
     ConsultantDetailsComponent,
     ContractsComponent,
-    FilterPipe
+    FilterPipe,
+    ConsultantEmployeeComponent
   ],
   imports: [
     BrowserModule,

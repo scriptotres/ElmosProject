@@ -164,6 +164,8 @@ namespace Slick.Database.Migrations
 
                     b.Property<string>("Email");
 
+                    b.Property<Guid?>("EmployeeId");
+
                     b.Property<string>("Firstname")
                         .IsRequired();
 
@@ -183,6 +185,8 @@ namespace Slick.Database.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AddressId");
+
+                    b.HasIndex("EmployeeId");
 
                     b.ToTable("Consultants");
                 });
@@ -331,6 +335,10 @@ namespace Slick.Database.Migrations
                         .WithMany()
                         .HasForeignKey("AddressId")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Slick.Models.People.Employee", "Employee")
+                        .WithMany()
+                        .HasForeignKey("EmployeeId");
                 });
 
             modelBuilder.Entity("Slick.Models.People.Employee", b =>

@@ -34,7 +34,26 @@
     <input class=e-div__input id="zip" name="zip" type="text" [(ngModel)]="consultant.zip" />
 
     <label class=e-div__label for="country">Land</label>
-    <input class=e-div__input id="country" name="country" type="text"[(ngModel)]="consultant.country"  />
+    <input class=e-div__input id="country" name="country" type="text" [(ngModel)]="consultant.country" />
+  </div>
+
+
+
+  <div *ngif class="e-div__employee">
+    <h1>Account Manager</h1>
+
+
+    <label class=e-div__label>Voornaam</label>
+    <label class="e-div__datalabel">{{consultant.employee.firstname}}</label>
+    <label class=e-div__label>Achternaam</label>
+    <label class="e-div__datalabel">{{consultant.employee.lastname}}</label>
+    <label class=e-div__label>Email</label>
+    <label class="e-div__datalabel">{{consultant.employee.email}}</label>
+    <label class=e-div__label>Telefoonnummer</label>
+    <label class="e-div__datalabel">{{consultant.employee.telephone}}</label>
+
+    <button (click)="viewEmployees()" class="e-div__contractbutton">bekijk alle Employees</button>
+
   </div>
 
   <div class="e-div__currentcontract">
@@ -67,6 +86,15 @@
       <i class="fas fa-user-minus"></i>
     </label>
   </div>
+
+  <select [(ngModel)]="consultant.employee">
+    <option *ngFor="let employee of employees"
+            [value]="employee.firstname">
+      {{employee.firstname}}
+    </option>
+  </select>
+
+
 </div>
 
 

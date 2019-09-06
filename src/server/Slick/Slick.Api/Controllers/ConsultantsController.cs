@@ -28,13 +28,14 @@ namespace Slick.Api.Controllers
         private readonly IConsultantService service;
         private IContractService contractService;
         private readonly ApplicationDBContext entitiesContext;
+        private readonly IEmployeeService employeeService;
 
-
-        public ConsultantsController(IConsultantService service, IContractService contractService, ApplicationDBContext entitiesContext)
+        public ConsultantsController(IConsultantService service, IContractService contractService, ApplicationDBContext entitiesContext, IEmployeeService employeeService)
         {
             this.service = service;
             this.contractService = contractService;
             this.entitiesContext = entitiesContext;
+            this.employeeService = employeeService;
         }
 
 
@@ -76,6 +77,7 @@ namespace Slick.Api.Controllers
         public IActionResult Get(Guid id)
         {
             entitiesContext.Consultants.Include(Consultant => Consultant.Address).ToList();
+            entitiesContext.Consultants.Include(Consultant => Consultant.Employee).ToList();
             entitiesContext.Contracts.Include(contracts => contracts.ContractType).ToList();
 
             var c = service.GetById(id);
@@ -96,12 +98,24 @@ namespace Slick.Api.Controllers
                 Country = c.Address?.Country,
                 City = c.Address?.City,
                 Zip = c.Address.Zip,
-
+               
+                EmployeeId = c.Employee == null ? Guid.Empty : c.Employee.Id
             };
 
+            if (c.Employee != null)
+            {
+                var employee = this.employeeService.GetById(consultant.EmployeeId);
+                consultant.Employee = new EmployeeDto()
+                {
+                    id = employee.Id,
+                    lastname = employee.Lastname,
+                    firstname = employee.Firstname,
+                    Email = employee.Email,
+                    Telephone = employee.Telephone
+                };
+            }
+
             var contractFromDB = this.contractService.GetContractForConsultants(id);
-
-
             consultant.Contracts = new List<ContractDto>();
             foreach (Contract cont in contractFromDB)
             {
@@ -194,6 +208,7 @@ namespace Slick.Api.Controllers
 
                 Address = address,
                 AddressId = address.Id,
+                EmployeeId=cDTO.EmployeeId,
 
                 Contracts = contract
 

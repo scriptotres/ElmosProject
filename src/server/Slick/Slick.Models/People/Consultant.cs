@@ -39,6 +39,9 @@ namespace Slick.Models.People
             set { }
         }
 
-        //TODO account
+        public Guid? EmployeeId { get; set; }
+        public virtual Employee Employee { get; set; }
+
+        //TODO account en employee
     }
 }
