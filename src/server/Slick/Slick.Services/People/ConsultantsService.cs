@@ -70,7 +70,7 @@ namespace Slick.Services.People
             var a = new Address()
             {
                 City = address.City,
-                Number = address.City,
+                Number = address.Number,
                 Street = address.Street,
                 Zip = address.Zip,
                 Id = address.Id,

@@ -8,6 +8,7 @@ import { Location } from '@angular/common';
 import { error } from 'util';
 import { HttpErrorResponse } from '@angular/common/http';
 import { EmployeesService } from '../../services/employees.service';
+import employee from '../../models/employee';
 
 
 @Component({
@@ -17,6 +18,7 @@ import { EmployeesService } from '../../services/employees.service';
 })
 export class ConsultantDetailsComponent implements OnInit {
   @Input() consultant: consultant;
+
   editForm: FormGroup;
 
   constructor(private employeeservice: EmployeesService, private consultantservice: ConsultantsService, private route: ActivatedRoute, private location: Location, private router: Router) {
@@ -42,14 +44,23 @@ export class ConsultantDetailsComponent implements OnInit {
     this.getEmployees();
   }
   public employees: any;
-
+  public employeeofconsultant: any;
 
   getConsultant(): void {
     const id = this.route.snapshot.paramMap.get('id');
 
     this.consultantservice.getConsultant(id)
-      .subscribe(c => [this.consultant = c, console.log(this.consultant)]);
+      .subscribe(c => [this.consultant = c, this.consultant.employeeId, console.log(this.consultant),
+      this.getEmployee(this.consultant.employeeId)]);
   }
+
+  getEmployee(idEmployee): void {
+    const id = idEmployee;
+    this.employeeservice.getEmployee(id).subscribe(e => [this.employeeofconsultant = e,
+      console.log(this.employeeofconsultant)
+    ]);
+  }
+
 
   getEmployees(): void {
     this.employeeservice.loadEmployees()
@@ -66,6 +77,15 @@ export class ConsultantDetailsComponent implements OnInit {
         .subscribe(() => this.goBack());
     }
   }
+
+  updateEmployee(employeeId): void {
+    let id = this.route.snapshot.paramMap.get('id');
+    this.consultant.employeeId = employeeId;
+    this.consultant.id = id;
+    this.consultantservice.updateConsultant(this.consultant)
+      .subscribe((data)=>window.location.reload())
+}
+
 
   updateConsultant(): void {
     let id = this.route.snapshot.paramMap.get('id');
@@ -92,6 +112,7 @@ export class ConsultantDetailsComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+
 
 
 }

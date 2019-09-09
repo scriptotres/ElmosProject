@@ -39,22 +39,7 @@
 
 
 
-  <div *ngif class="e-div__employee">
-    <h1>Account Manager</h1>
 
-
-    <label class=e-div__label>Voornaam</label>
-    <label class="e-div__datalabel">{{consultant.employee.firstname}}</label>
-    <label class=e-div__label>Achternaam</label>
-    <label class="e-div__datalabel">{{consultant.employee.lastname}}</label>
-    <label class=e-div__label>Email</label>
-    <label class="e-div__datalabel">{{consultant.employee.email}}</label>
-    <label class=e-div__label>Telefoonnummer</label>
-    <label class="e-div__datalabel">{{consultant.employee.telephone}}</label>
-
-    <button (click)="viewEmployees()" class="e-div__contractbutton">bekijk alle Employees</button>
-
-  </div>
 
   <div class="e-div__currentcontract">
     <h1>Current Contract</h1>
@@ -78,28 +63,40 @@
     <button (click)="viewContracts()" class="e-div__contractbutton">bekijk alle contracten</button>
   </div>
 
-  <div class="e-div__buttons">
-    <label class="e-div__edit" (click)="updateConsultant()">
-      <i class="far fa-save"></i>
-    </label>
-    <label class="e-div__delete" (click)="deleteConsultant()">
-      <i class="fas fa-user-minus"></i>
-    </label>
+
+  <div class="e-div__employee" *ngIf="!employeeofconsultant">
+    <label class=e-div__label>kies een accountmanager</label>
+    <select (ngModelChange)="updateEmployee($event)" [(ngModel)]="employeeofconsultant">
+      <option [(ngValue)]="employee.id" *ngFor="let employee of employees">
+        {{employee.firstname}}
+      </option>
+    </select>
   </div>
 
-  <select [(ngModel)]="consultant.employee">
-    <option *ngFor="let employee of employees"
-            [value]="employee.firstname">
-      {{employee.firstname}}
-    </option>
-  </select>
-
-
-</div>
-
-
-
-
-
-
-
+    <div class="e-div__employee" *ngIf="employeeofconsultant">
+      <h1>Account Manager</h1>
+      <label class=e-div__label>kies andere accountmanager</label>
+      <select (ngModelChange)="updateEmployee($event)" [(ngModel)]="employeeofconsultant">
+        <option [(ngValue)]="employee.id" *ngFor="let employee of employees">
+          {{employee.firstname}}
+        </option>
+      </select>
+      <label class=e-div__label>Voornaam</label>
+      <label class="e-div__datalabel">{{employeeofconsultant.firstname}}</label>
+      <label class=e-div__label>Achternaam</label>
+      <label id="lastname" class="e-div__datalabel">{{employeeofconsultant.lastname}}</label>
+      <label class=e-div__label>Email</label>
+      <label class="e-div__datalabel">{{employeeofconsultant.email}}</label>
+      <label class=e-div__label>Telefoonnummer</label>
+      <label class="e-div__datalabel">{{employeeofconsultant.telephone}}</label>
+      <button (click)="viewEmployees()" class="e-div__contractbutton">bekijk alle accountmanagers</button>
+    </div>
+    <div class="e-div__buttons">
+      <label class="e-div__edit" (click)="updateConsultant()">
+        <i class="far fa-save"></i>
+      </label>
+      <label class="e-div__delete" (click)="deleteConsultant()">
+        <i class="fas fa-user-minus"></i>
+      </label>
+    </div>
+  </div>

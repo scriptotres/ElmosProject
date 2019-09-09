@@ -7,10 +7,9 @@
     "\\src\\app\\consultants\\consultant-details",
     "\\src\\app\\consultants\\consultant-employee",
     "\\src\\app\\consultants\\contracts",
-    "\\src\\app\\employees",
     "\\src\\app\\models",
     "\\src\\app\\services"
   ],
-  "SelectedNode": "\\src\\app\\consultants\\contracts\\contracts.component.html",
+  "SelectedNode": "\\src\\app\\consultants\\consultant-details\\consultant-details.component.html",
   "PreviewInSolutionExplorer": false
 }

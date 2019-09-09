@@ -40,7 +40,6 @@ export class ConsultantsService {
             c.employeeId,
             c.currentContract,
             c.contracts,
-
           );
 
           consultants.push(newC);
@@ -62,13 +61,6 @@ export class ConsultantsService {
     return this.http.put(this.consultantsurl, consultant, this.httpOptions);
   }
 
-  updateEmployee(consultant: consultant): Observable<any> {
-    console.log(consultant);
-    this.httpOptions.body = consultant;
-    return this.http.put(this.consultantsurl, consultant, this.httpOptions);
-  }
-
-
   deleteConsultant(consultant: consultant): Observable<any> {
     this.httpOptions.body = consultant;
     return this.http.delete<consultant>(this.consultantsurl, this.httpOptions).pipe()
@@ -79,7 +71,7 @@ export class ConsultantsService {
     body: this.consultant
   }
 
-  }
+}
 
 
 

@@ -102,18 +102,18 @@ namespace Slick.Api.Controllers
                 EmployeeId = c.Employee == null ? Guid.Empty : c.Employee.Id
             };
 
-            if (c.Employee != null)
-            {
-                var employee = this.employeeService.GetById(consultant.EmployeeId);
-                consultant.Employee = new EmployeeDto()
-                {
-                    id = employee.Id,
-                    lastname = employee.Lastname,
-                    firstname = employee.Firstname,
-                    Email = employee.Email,
-                    Telephone = employee.Telephone
-                };
-            }
+            //if (c.Employee != null)
+            //{
+            //    var employee = this.employeeService.GetById(consultant.EmployeeId);
+            //    consultant.Employee = new EmployeeDto()
+            //    {
+            //        id = employee.Id,
+            //        lastname = employee.Lastname,
+            //        firstname = employee.Firstname,
+            //        Email = employee.Email,
+            //        Telephone = employee.Telephone
+            //    };
+            //}
 
             var contractFromDB = this.contractService.GetContractForConsultants(id);
             consultant.Contracts = new List<ContractDto>();

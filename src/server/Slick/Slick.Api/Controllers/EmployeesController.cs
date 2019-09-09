@@ -34,14 +34,18 @@ namespace Slick.Api.Controllers
         public IActionResult GetById(Guid id)
         {
             var e = service.GetById(id);
-            var employee = new EmployeeDto()
+            if (e != null)
             {
-                lastname = e.Firstname,
-                Telephone = e.Telephone,
-                Email = e.Email
-            };
-            return Ok(employee);
-
+                var employee = new EmployeeDto()
+                {
+                    firstname = e.Firstname,
+                    lastname = e.Lastname,
+                    Telephone = e.Telephone,
+                    Email = e.Email
+                };
+                return Ok(employee);
+            }
+            return Ok(null);
         }
 
         [HttpPost]

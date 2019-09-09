@@ -37,8 +37,8 @@ export class ConsultantEmployeeComponent implements OnInit {
     let id = this.route.snapshot.paramMap.get('id');
     this.consultant.id = id;
     this.consultant.employeeId = employeeID;
-    this.consultantservice.updateEmployee(this.consultant)
-      .subscribe()
+    this.consultantservice.updateConsultant(this.consultant)
+      .subscribe((data) => this.goBack())
   }
 
 

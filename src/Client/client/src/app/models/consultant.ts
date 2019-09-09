@@ -40,16 +40,6 @@ export default class consultant {
       contractTypeTitle:string
 
     }
-    //public employee: {
-    //  firstname: employee["firstname"],
-    //  lastname: employee["lastname"],
-    //  id: employee["id"]
-
-      //public employee: {
-      //  firstname:string,
-      //  lastname: string,
-      //  id: any
-    
 
   ) { }
 
