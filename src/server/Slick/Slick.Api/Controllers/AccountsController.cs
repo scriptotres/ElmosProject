@@ -32,11 +32,12 @@ namespace Slick.Api.Controllers
             {
                 account.Add(new AccountDto()
                 {
-                    City = a.Address?.City,
                     CompanyName = a.CompanyName,
+                    VatNumber=a.VatNumber,
+                    City = a.Address?.City,
                     Street = a.Address?.City,
                     Number = a.Address?.Number,
-                    id=a.Id
+                    Id=a.Id
                 });
             }
             return Ok(account);

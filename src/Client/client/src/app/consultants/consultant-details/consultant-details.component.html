@@ -11,7 +11,7 @@
     <label class=e-div__label for="workemail">Werk Email</label>
     <input class=e-div__input id="workemail" name="workemail" type="text" [(ngModel)]="consultant.workEmail" />
     <label class=e-div__label for="birthdate">Geboortedatum</label>
-    <input class=e-div__input id="birthdate" name="birthdate" type="datetime-local" [(ngModel)]="consultant.birthdate" />
+    <input class=e-div__input id="birthdate" name="birthdate" type="date" [(ngModel)]="consultant.birthdate" />
     <label class=e-div__label for="mobile">Gsm Nummer</label>
     <input class=e-div__input id="mobile" name="mobile" type="text" [(ngModel)]="consultant.mobile" />
     <label class=e-div__label for="telephone">Telefoon Nummer</label>
@@ -38,19 +38,16 @@
   </div>
 
 
-
-
-
   <div class="e-div__currentcontract">
     <h1>Current Contract</h1>
     <label class=e-div__label for="salary">Type contract</label>
     <input class=e-div__input id="salary" name="salary" type="text" [(ngModel)]="consultant.currentContract.contractTypeTitle" />
 
     <label class=e-div__label for="startdate">start datum</label>
-    <input class=e-div__input name="startdate" type="datetime-local" [(ngModel)]="consultant.currentContract.startDate" />
+    <input class=e-div__input name="startdate" type="date" [(ngModel)]="consultant.currentContract.startDate" />
 
     <label class=e-div__label for="enddate">eind datum</label>
-    <input class=e-div__input id="enddate" name="enddate" type="datetime-local" [(ngModel)]="consultant.currentContract.endDate" />
+    <input class=e-div__input id="enddate" name="enddate" type="date" [(ngModel)]="consultant.currentContract.endDate" />
 
     <label class=e-div__label for="documentUrl">view document</label>
     <input class=e-div__input id="documentUrl" name="documentUrl" type="text" [(ngModel)]="consultant.currentContract.documentUrl" />
@@ -59,44 +56,44 @@
     <input class=e-div__input id="salary" name="salary" type="text" [(ngModel)]="consultant.currentContract.salary" />
 
     <label class=e-div__label for="signedDate">datum ondertekend</label>
-    <input class=e-div__input id="signedDate" name="signedDate" type="datetime-local" [(ngModel)]="consultant.currentContract.signedDate" />
+    <input class=e-div__input id="signedDate" name="signedDate" type="date" [(ngModel)]="consultant.currentContract.signedDate" />
     <button (click)="viewContracts()" class="e-div__contractbutton">bekijk alle contracten</button>
   </div>
 
-
   <div class="e-div__employee" *ngIf="!employeeofconsultant">
     <label class=e-div__label>kies een accountmanager</label>
-    <select (ngModelChange)="updateEmployee($event)" [(ngModel)]="employeeofconsultant">
+    <select class="e-select__employee" (ngModelChange)="updateEmployee($event)" [(ngModel)]="employeeofconsultant">
       <option [(ngValue)]="employee.id" *ngFor="let employee of employees">
         {{employee.firstname}}
       </option>
     </select>
+    <button (click)="viewEmployees()" class="e-div__contractbutton">bekijk alle accountmanagers</button>
   </div>
 
-    <div class="e-div__employee" *ngIf="employeeofconsultant">
-      <h1>Account Manager</h1>
-      <label class=e-div__label>kies andere accountmanager</label>
-      <select (ngModelChange)="updateEmployee($event)" [(ngModel)]="employeeofconsultant">
-        <option [(ngValue)]="employee.id" *ngFor="let employee of employees">
-          {{employee.firstname}}
-        </option>
-      </select>
-      <label class=e-div__label>Voornaam</label>
-      <label class="e-div__datalabel">{{employeeofconsultant.firstname}}</label>
-      <label class=e-div__label>Achternaam</label>
-      <label id="lastname" class="e-div__datalabel">{{employeeofconsultant.lastname}}</label>
-      <label class=e-div__label>Email</label>
-      <label class="e-div__datalabel">{{employeeofconsultant.email}}</label>
-      <label class=e-div__label>Telefoonnummer</label>
-      <label class="e-div__datalabel">{{employeeofconsultant.telephone}}</label>
-      <button (click)="viewEmployees()" class="e-div__contractbutton">bekijk alle accountmanagers</button>
-    </div>
-    <div class="e-div__buttons">
-      <label class="e-div__edit" (click)="updateConsultant()">
-        <i class="far fa-save"></i>
-      </label>
-      <label class="e-div__delete" (click)="deleteConsultant()">
-        <i class="fas fa-user-minus"></i>
-      </label>
-    </div>
+  <div class="e-div__employee" *ngIf="employeeofconsultant">
+    <h1>Account Manager</h1>
+    <label class=e-div__label>kies andere accountmanager</label>
+    <select class="e-select__employee" (ngModelChange)="updateEmployee($event)" [(ngModel)]="employeeofconsultant">
+      <option [(ngValue)]="employee.id" *ngFor="let employee of employees">
+        {{employee.firstname}}
+      </option>
+    </select>
+    <label class=e-div__label>Voornaam</label>
+    <label class="e-div__datalabel">{{employeeofconsultant.firstname}}</label>
+    <label class=e-div__label>Achternaam</label>
+    <label id="lastname" class="e-div__datalabel">{{employeeofconsultant.lastname}}</label>
+    <label class=e-div__label>Email</label>
+    <label class="e-div__datalabel">{{employeeofconsultant.email}}</label>
+    <label class=e-div__label>Telefoonnummer</label>
+    <label class="e-div__datalabel">{{employeeofconsultant.telephone}}</label>
+    <button (click)="viewEmployees()" class="e-div__contractbutton">bekijk alle accountmanagers</button>
   </div>
+  <div class="e-div__buttons">
+    <label class="e-div__edit" (click)="updateConsultant()">
+      <i class="far fa-save"></i>
+    </label>
+    <label class="e-div__delete" (click)="deleteConsultant()">
+      <i class="fas fa-user-minus"></i>
+    </label>
+  </div>
+</div>

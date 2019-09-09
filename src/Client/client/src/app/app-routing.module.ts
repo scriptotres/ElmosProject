@@ -7,12 +7,14 @@ import { EmployeesComponent } from './employees/employees.component';
 import { ConsultantDetailsComponent } from './consultants/consultant-details/consultant-details.component';
 import { ContractsComponent } from './consultants/contracts/contracts.component';
 import { ConsultantEmployeeComponent } from './consultants/consultant-employee/consultant-employee.component';
+import { AccountsComponent } from './accounts/accounts.component';
 
 const routes: Routes = [{
   path: '', pathMatch: 'full', component: HomeComponent 
 },
   { path: 'consultants', component: ConsultantsComponent },
   { path: 'employees', component: EmployeesComponent },
+  { path: 'accounts', component: AccountsComponent },
   { path: 'consultants/details/:id', component: ConsultantDetailsComponent },
   { path: 'consultants/contracts/:id', component: ContractsComponent },
   { path: 'consultants/employees/:id', component: ConsultantEmployeeComponent }

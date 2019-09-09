@@ -38,6 +38,7 @@ export class ConsultantsService {
             c.address.country,
             c.address.zip,
             c.employeeId,
+            c.accountId,
             c.currentContract,
             c.contracts,
           );

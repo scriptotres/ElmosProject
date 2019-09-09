@@ -15,6 +15,8 @@ namespace Slick.Api.Dtos
         public Guid AddressId { get; set; }
         public Guid EmployeeId { get; set; }
         public EmployeeDto Employee { get; set; }
+        public Guid AccountId { get; set; }
+        public AccountDto Account { get; set; }
         public string Street { get; set; }
         public string Number { get; set; }
         public string City { get; set; }

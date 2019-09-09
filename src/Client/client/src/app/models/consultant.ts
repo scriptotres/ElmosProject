@@ -1,11 +1,9 @@
-import employee from './employee';
-
 export default class consultant {
   constructor(
     public id: any,
     public firstname: string,
     public lastname: string,
-    public birthdate: any,
+    public birthdate: string,
 
     public email: string,
     public workEmail: string,
@@ -20,7 +18,8 @@ export default class consultant {
     public zip: any,
     public country: string,
 
-    public employeeId:any,
+    public employeeId: any,
+    public accountId: any,
     public currentContract: {
       endDate: any,
       startDate: any,

@@ -1,1 +1,16 @@
-<p>accounts works!</p>
+<table class="e-table">
+  <thead class="e-thead">
+    <tr>
+      <th>Klantnaam</th>
+      <th>VatNummer</th>
+    </tr>
+  </thead>
+  <tbody class="e-tbody">
+    <ng-container *ngFor="let account of accounts;">
+      <tr>
+        <td>  {{account.companyname}}</td>
+        <td>  {{account.vatnumber}}</td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

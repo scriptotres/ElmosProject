@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.ComponentModel.DataAnnotations.Schema;
+using Slick.Models.Customers;
 
 namespace Slick.Models.People
 {
@@ -42,6 +43,8 @@ namespace Slick.Models.People
         public Guid? EmployeeId { get; set; }
         public virtual Employee Employee { get; set; }
 
-        //TODO account en employee
+        public Guid? AccountId { get; set; }
+        public virtual Account Account { get; set; }
+
     }
 }

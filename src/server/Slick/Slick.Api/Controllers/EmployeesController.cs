@@ -38,8 +38,8 @@ namespace Slick.Api.Controllers
             {
                 var employee = new EmployeeDto()
                 {
-                    firstname = e.Firstname,
-                    lastname = e.Lastname,
+                    Firstname = e.Firstname,
+                    Lastname = e.Lastname,
                     Telephone = e.Telephone,
                     Email = e.Email
                 };

@@ -17,7 +17,8 @@ using Slick.Models.Contracts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Slick.Models.Contact;
-
+using Slick.Models.Customers;
+using Slick.Services.Costumers;
 
 namespace Slick.Api.Controllers
 {
@@ -29,13 +30,19 @@ namespace Slick.Api.Controllers
         private IContractService contractService;
         private readonly ApplicationDBContext entitiesContext;
         private readonly IEmployeeService employeeService;
+        private readonly IAccountService accountService;
 
-        public ConsultantsController(IConsultantService service, IContractService contractService, ApplicationDBContext entitiesContext, IEmployeeService employeeService)
+        public ConsultantsController(IConsultantService service,
+            IEmployeeService employeeService, 
+            IContractService contractService,
+            IAccountService accountService,
+            ApplicationDBContext entitiesContext)
         {
             this.service = service;
             this.contractService = contractService;
             this.entitiesContext = entitiesContext;
             this.employeeService = employeeService;
+            this.accountService = accountService;
         }
 
 
@@ -78,6 +85,7 @@ namespace Slick.Api.Controllers
         {
             entitiesContext.Consultants.Include(Consultant => Consultant.Address).ToList();
             entitiesContext.Consultants.Include(Consultant => Consultant.Employee).ToList();
+            entitiesContext.Consultants.Include(Consultant => Consultant.Account).ToList();
             entitiesContext.Contracts.Include(contracts => contracts.ContractType).ToList();
 
             var c = service.GetById(id);
@@ -99,21 +107,34 @@ namespace Slick.Api.Controllers
                 City = c.Address?.City,
                 Zip = c.Address.Zip,
                
-                EmployeeId = c.Employee == null ? Guid.Empty : c.Employee.Id
+                EmployeeId = c.Employee == null ? Guid.Empty : c.Employee.Id,
+
+                AccountId = c.Account == null ? Guid.Empty : c.Account.Id
+
             };
 
-            //if (c.Employee != null)
-            //{
-            //    var employee = this.employeeService.GetById(consultant.EmployeeId);
-            //    consultant.Employee = new EmployeeDto()
-            //    {
-            //        id = employee.Id,
-            //        lastname = employee.Lastname,
-            //        firstname = employee.Firstname,
-            //        Email = employee.Email,
-            //        Telephone = employee.Telephone
-            //    };
-            //}
+            if (c.Employee != null)
+            {
+                var employee = this.employeeService.GetById(consultant.EmployeeId);
+                consultant.Employee = new EmployeeDto()
+                {
+                    Id = employee.Id,
+                    Lastname = employee.Lastname,
+                    Firstname = employee.Firstname,
+                    Email = employee.Email,
+                    Telephone = employee.Telephone
+                };
+            }
+            if (c.Account != null)
+            {
+                var account = this.accountService.GetById(consultant.AccountId);
+                consultant.Account = new AccountDto()
+                {
+                    Id=account.Id,
+                    CompanyName = account.CompanyName,
+                    VatNumber = account.VatNumber
+                };
+            }
 
             var contractFromDB = this.contractService.GetContractForConsultants(id);
             consultant.Contracts = new List<ContractDto>();
@@ -158,7 +179,8 @@ namespace Slick.Api.Controllers
         public IActionResult Put(ConslutantDto cDTO)
         {
 
-
+            EmployeeDto emp = new EmployeeDto();
+            AccountDto acc = new AccountDto();
 
             IList<Contract> contract = new List<Contract>();
 
@@ -195,6 +217,53 @@ namespace Slick.Api.Controllers
                 Id = cDTO.AddressId
 
             };
+
+            if (cDTO.Account != null)
+            {
+                var account = new AccountDto()
+                {
+                    CompanyName = cDTO.Account.CompanyName,
+                    VatNumber = cDTO.Account.VatNumber,
+                    Id = cDTO.AccountId
+
+                };
+                acc = account;
+            }
+            else if (cDTO.AccountId != null)
+            {
+                var account = new AccountDto()
+                {
+                    Id = cDTO.AccountId
+                };
+                acc = account;
+            }
+
+                if (cDTO.Employee != null)
+            {
+                var employee = new EmployeeDto()
+                {
+                    Firstname = cDTO.Employee.Firstname,
+                    Email = cDTO.Employee.Email,
+                    Telephone = cDTO.Employee.Telephone,
+                    Lastname = cDTO.Employee.Lastname,
+                    Id = cDTO.EmployeeId
+
+                };
+                emp = employee;
+            }
+
+            else if (cDTO.EmployeeId!= null)
+            {
+                var employee = new EmployeeDto()
+                {
+                    Id = cDTO.EmployeeId,
+                    
+                };
+
+                 emp = employee;
+            }
+
+
             var consultant = new Consultant()
             {
                 Id = cDTO.Id,
@@ -208,27 +277,20 @@ namespace Slick.Api.Controllers
 
                 Address = address,
                 AddressId = address.Id,
-                EmployeeId=cDTO.EmployeeId,
+
+                EmployeeId = cDTO.EmployeeId == null ? Guid.Empty : emp.Id,
+
+                AccountId = cDTO.Account == null ? Guid.Empty : acc.Id,
 
                 Contracts = contract
-
-
             };
 
 
 
-            //TODO: currentcontract saven??
             Guid id = consultant.Id;
-            //   contractService.Update(currentcontract);
             service.Update(consultant);
             return Ok(cDTO);
         }
-
-        //[HttpGet]
-        //public IActionResult FindBy()
-        //{
-        //    return Ok(service.FindBy(c=> c.Firstname=="jonan"));
-        //}
 
     }
 }

@@ -9,6 +9,7 @@ import { error } from 'util';
 import { HttpErrorResponse } from '@angular/common/http';
 import { EmployeesService } from '../../services/employees.service';
 import employee from '../../models/employee';
+import { AccountsService } from '../../services/accounts.service';
 
 
 @Component({
@@ -21,22 +22,7 @@ export class ConsultantDetailsComponent implements OnInit {
 
   editForm: FormGroup;
 
-  constructor(private employeeservice: EmployeesService, private consultantservice: ConsultantsService, private route: ActivatedRoute, private location: Location, private router: Router) {
-    //this.editForm = this.formBuilder.group({
-    //  firstname: [''],
-    //  lastname: [''],
-    //  email: [''],
-    //  workemail: [''],
-    //  birthdate: [''],
-    //  mobile: [''],
-    //  telephone: [''],
-    //  street:[''],
-    //  number: [''],
-    //  city: [''],
-    //  zip: [''],
-    //  country:['']
-    //  //TODO: required toevoegen
-    //});
+  constructor(private accountservice: AccountsService, private employeeservice: EmployeesService, private consultantservice: ConsultantsService, private route: ActivatedRoute, private location: Location, private router: Router) {
   }
 
   ngOnInit() {
@@ -46,21 +32,17 @@ export class ConsultantDetailsComponent implements OnInit {
   public employees: any;
   public employeeofconsultant: any;
 
+
   getConsultant(): void {
     const id = this.route.snapshot.paramMap.get('id');
-
     this.consultantservice.getConsultant(id)
       .subscribe(c => [this.consultant = c, this.consultant.employeeId, console.log(this.consultant),
-      this.getEmployee(this.consultant.employeeId)]);
+        this.getEmployee(this.consultant.employeeId),
+        this.consultant.birthdate = this.consultant.birthdate.slice(0, 10),
+        this.consultant.currentContract.endDate = this.consultant.currentContract.endDate.slice(0, 10),
+        this.consultant.currentContract.startDate = this.consultant.currentContract.startDate.slice(0, 10),
+        this.consultant.currentContract.signedDate = this.consultant.currentContract.signedDate.slice(0,10)]);
   }
-
-  getEmployee(idEmployee): void {
-    const id = idEmployee;
-    this.employeeservice.getEmployee(id).subscribe(e => [this.employeeofconsultant = e,
-      console.log(this.employeeofconsultant)
-    ]);
-  }
-
 
   getEmployees(): void {
     this.employeeservice.loadEmployees()
@@ -68,6 +50,15 @@ export class ConsultantDetailsComponent implements OnInit {
       console.log(this.employees)
       ]);
   }
+
+
+  getEmployee(idEmployee): void {
+    const id = idEmployee;
+    this.employeeservice.getEmployee(id).subscribe(e => [this.employeeofconsultant = e,
+    console.log(this.employeeofconsultant)
+    ]);
+  }
+
   deleteConsultant(): void {
 
     if (confirm(`ben je zeker dat je consultant ${this.consultant.firstname} ${this.consultant.lastname} wilt verwijderen?`)) {

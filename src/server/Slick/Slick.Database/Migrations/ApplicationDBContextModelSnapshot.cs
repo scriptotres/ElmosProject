@@ -158,6 +158,8 @@ namespace Slick.Database.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<Guid?>("AccountId");
+
                     b.Property<Guid>("AddressId");
 
                     b.Property<DateTime>("Birthdate");
@@ -183,6 +185,8 @@ namespace Slick.Database.Migrations
                     b.Property<string>("WorkEmail");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AccountId");
 
                     b.HasIndex("AddressId");
 
@@ -331,6 +335,10 @@ namespace Slick.Database.Migrations
 
             modelBuilder.Entity("Slick.Models.People.Consultant", b =>
                 {
+                    b.HasOne("Slick.Models.Customers.Account", "Account")
+                        .WithMany()
+                        .HasForeignKey("AccountId");
+
                     b.HasOne("Slick.Models.Contact.Address", "Address")
                         .WithMany()
                         .HasForeignKey("AddressId")
