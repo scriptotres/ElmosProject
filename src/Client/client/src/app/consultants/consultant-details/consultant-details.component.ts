@@ -28,15 +28,20 @@ export class ConsultantDetailsComponent implements OnInit {
   ngOnInit() {
     this.getConsultant();
     this.getEmployees();
+    this.getAccounts();
   }
   public employees: any;
+  public accounts: any;
   public employeeofconsultant: any;
-
+  public accountofconsultant: any;
 
   getConsultant(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.consultantservice.getConsultant(id)
-      .subscribe(c => [this.consultant = c, this.consultant.employeeId, console.log(this.consultant),
+      .subscribe(c => [
+        this.consultant = c,
+        console.log(this.consultant),
+        this.getAccount( this.consultant.accountId),
         this.getEmployee(this.consultant.employeeId),
         this.consultant.birthdate = this.consultant.birthdate.slice(0, 10),
         this.consultant.currentContract.endDate = this.consultant.currentContract.endDate.slice(0, 10),
@@ -46,16 +51,23 @@ export class ConsultantDetailsComponent implements OnInit {
 
   getEmployees(): void {
     this.employeeservice.loadEmployees()
-      .subscribe(e => [this.employees = e,
-      console.log(this.employees)
-      ]);
+      .subscribe(e => [this.employees = e]);
+  }
+
+  getAccounts(): void {
+    this.accountservice.loadAccounts()
+      .subscribe(e => [this.accounts = e, console.log(this.accounts)]);
   }
 
 
+  getAccount(idAccount): void {
+    const id = idAccount;
+    this.accountservice.getAccount(id).subscribe(a => [this.accountofconsultant = a, console.log(this.accountofconsultant)]);
+  }
+
   getEmployee(idEmployee): void {
     const id = idEmployee;
-    this.employeeservice.getEmployee(id).subscribe(e => [this.employeeofconsultant = e,
-    console.log(this.employeeofconsultant)
+    this.employeeservice.getEmployee(id).subscribe(e => [this.employeeofconsultant = e
     ]);
   }
 
@@ -76,7 +88,13 @@ export class ConsultantDetailsComponent implements OnInit {
     this.consultantservice.updateConsultant(this.consultant)
       .subscribe((data)=>window.location.reload())
 }
-
+  updateAccount(accountId): void {
+    let id = this.route.snapshot.paramMap.get('id');
+    this.consultant.accountId = accountId;
+    this.consultant.id = id;
+    this.consultantservice.updateConsultant(this.consultant)
+      .subscribe((data) => window.location.reload())
+  }
 
   updateConsultant(): void {
     let id = this.route.snapshot.paramMap.get('id');

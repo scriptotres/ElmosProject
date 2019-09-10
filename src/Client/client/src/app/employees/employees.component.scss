@@ -1,16 +1,38 @@
+@import '../scss/settings/s.colors.scss';
+
+.e-div__search {
+  margin-bottom: 12px;
+  color: $color-default-end-color
+}
+
+.e-div__searchinput {
+  width: 190px;
+  padding: 12px 20px;
+  margin: 8px 0 0 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 20px;
+}
 
 .e-thead {
-  border-width: 1px;
-  border-style: solid;
+  padding-top: 40px;
+  width: 100%;
+  color: $color-default-end-color;
 }
 
 .e-table {
-  width: 100%;
+  width: 90%;
   position: center;
-  border: 2px solid black;
+  color: $color-default-end-color;
   border-collapse: collapse;
 }
 
-table, th, td {
-  border: 1px solid black;
+th, td {
+  border: 3px solid $color-default-end-color;
+}
+
+td, tr {
+  color: $color-default-end-color;
 }

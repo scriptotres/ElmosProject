@@ -36,7 +36,10 @@ export default class consultant {
       salary: number,
       signedDate: any,
       id: any,
-      contractTypeTitle:string
+      contractTypeTitle: string,
+      sellingprice: number,
+      purchaseprice: number,
+      commentary:string
 
     }
 

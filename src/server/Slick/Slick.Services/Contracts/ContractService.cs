@@ -32,7 +32,8 @@ namespace Slick.Services.Contracts
         }
         public IEnumerable<Contract>GetContractForConsultants(Guid consultantId)
         {
-            return this.repo.FindBy(c => c.ConsultantId == consultantId).ToList();
+
+             return this.repo.FindBy(c => c.ConsultantId == consultantId).OrderBy(c=>c.StartDate).ToList();
         }
 
         public IEnumerable<Models.Contracts.Contract> GetAll()

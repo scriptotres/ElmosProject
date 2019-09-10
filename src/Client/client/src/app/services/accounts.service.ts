@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import account from '../models/account';
 import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -22,12 +23,19 @@ export class AccountsService {
             a.companyName,
             a.vatNumber,
             a.city,
+            a.zip,
             a.street,
-            a.number)
+            a.number,
+          a.country)
 
           accounts.push(newA);
         }
         return accounts;
       }));
+  }
+
+  getAccount(id: any): Observable<account> {
+    const url = `${this.accounturl}/${id}`;
+    return this.http.get<account>(url).pipe();
   }
 }

@@ -7,5 +7,11 @@ export default class employee {
     public birthdate: any,
     public email: string,
     public telephone: number,
+    public street: string,
+    public number: string,
+    public city: string,
+
+    public country: string,
+    public zip: any
   ) { }
 }

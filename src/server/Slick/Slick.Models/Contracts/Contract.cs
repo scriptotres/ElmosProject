@@ -21,6 +21,9 @@ namespace Slick.Models.Contracts
 
         public string DocumentUrl { get; set; }
         public decimal Salary { get; set; }
+        public decimal SellingPrice { get; set; }
+        public decimal PurchasePrice { get; set; }
+        public string Commentary { get; set; }
 
         public override string ToString()
         {

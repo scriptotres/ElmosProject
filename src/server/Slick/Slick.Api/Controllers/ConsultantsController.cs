@@ -33,7 +33,7 @@ namespace Slick.Api.Controllers
         private readonly IAccountService accountService;
 
         public ConsultantsController(IConsultantService service,
-            IEmployeeService employeeService, 
+            IEmployeeService employeeService,
             IContractService contractService,
             IAccountService accountService,
             ApplicationDBContext entitiesContext)
@@ -106,35 +106,37 @@ namespace Slick.Api.Controllers
                 Country = c.Address?.Country,
                 City = c.Address?.City,
                 Zip = c.Address.Zip,
-               
+
                 EmployeeId = c.Employee == null ? Guid.Empty : c.Employee.Id,
 
                 AccountId = c.Account == null ? Guid.Empty : c.Account.Id
 
             };
 
-            if (c.Employee != null)
-            {
-                var employee = this.employeeService.GetById(consultant.EmployeeId);
-                consultant.Employee = new EmployeeDto()
-                {
-                    Id = employee.Id,
-                    Lastname = employee.Lastname,
-                    Firstname = employee.Firstname,
-                    Email = employee.Email,
-                    Telephone = employee.Telephone
-                };
-            }
-            if (c.Account != null)
-            {
-                var account = this.accountService.GetById(consultant.AccountId);
-                consultant.Account = new AccountDto()
-                {
-                    Id=account.Id,
-                    CompanyName = account.CompanyName,
-                    VatNumber = account.VatNumber
-                };
-            }
+
+            // NOTE: employee en account effe in commentaar laten, deze worde in de frontend opgeroepen!!!!!!
+            //if (c.Employee != null)
+            //{
+            //    var employee = this.employeeService.GetById(consultant.EmployeeId);
+            //    consultant.Employee = new EmployeeDto()
+            //    {
+            //        Id = employee.Id,
+            //        Lastname = employee.Lastname,
+            //        Firstname = employee.Firstname,
+            //        Email = employee.Email,
+            //        Telephone = employee.Telephone
+            //    };
+            //}
+            //if (c.Account != null)
+            //{
+            //    var account = this.accountService.GetById(consultant.AccountId);
+            //    consultant.Account = new AccountDto()
+            //    {
+            //        Id=account.Id,
+            //        CompanyName = account.CompanyName,
+            //        VatNumber = account.VatNumber
+            //    };
+            //}
 
             var contractFromDB = this.contractService.GetContractForConsultants(id);
             consultant.Contracts = new List<ContractDto>();
@@ -147,11 +149,17 @@ namespace Slick.Api.Controllers
                     DocumentUrl = cont.DocumentUrl,
                     Salary = cont.Salary,
                     SignedDate = cont.SignedDate,
+                    Commentary = cont.Commentary,
+                    PurchasePrice = cont.PurchasePrice,
+                    SellingPrice = cont.SellingPrice,
+
                     Id = cont.Id,
                     ConsultantId = cont.ConsultantId,
                     ContractTypeId = cont.ContractTypeId,
-                    ContractTypeTitle = cont.ContractType.Title
+                    ContractTypeTitle = cont.ContractType.Title,
                 });
+
+
 
             }
             return Ok(consultant);
@@ -199,6 +207,9 @@ namespace Slick.Api.Controllers
                     DocumentUrl = contr.DocumentUrl,
                     Salary = contr.Salary,
                     SignedDate = contr.SignedDate,
+                    Commentary = contr.Commentary,
+                    PurchasePrice = contr.PurchasePrice,
+                    SellingPrice = contr.SellingPrice,
                     Id = contr.Id,
                     ConsultantId = cDTO.Id,
                     ContractTypeId = contracttype.Id,
@@ -229,7 +240,7 @@ namespace Slick.Api.Controllers
                 };
                 acc = account;
             }
-            else if (cDTO.AccountId != null)
+            else if (cDTO.AccountId != Guid.Empty)
             {
                 var account = new AccountDto()
                 {
@@ -237,8 +248,10 @@ namespace Slick.Api.Controllers
                 };
                 acc = account;
             }
+            else
+                acc = null;
 
-                if (cDTO.Employee != null)
+            if (cDTO.Employee != null)
             {
                 var employee = new EmployeeDto()
                 {
@@ -251,19 +264,19 @@ namespace Slick.Api.Controllers
                 };
                 emp = employee;
             }
-
-            else if (cDTO.EmployeeId!= null)
+            else if (cDTO.EmployeeId != null)
             {
                 var employee = new EmployeeDto()
                 {
                     Id = cDTO.EmployeeId,
-                    
+
                 };
 
-                 emp = employee;
+                emp = employee;
             }
-
-
+            else
+                emp = null;
+             
             var consultant = new Consultant()
             {
                 Id = cDTO.Id,
@@ -278,9 +291,9 @@ namespace Slick.Api.Controllers
                 Address = address,
                 AddressId = address.Id,
 
-                EmployeeId = cDTO.EmployeeId == null ? Guid.Empty : emp.Id,
+                EmployeeId = emp?.Id,
 
-                AccountId = cDTO.Account == null ? Guid.Empty : acc.Id,
+                AccountId =acc?.Id ,
 
                 Contracts = contract
             };

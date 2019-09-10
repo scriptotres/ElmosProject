@@ -26,7 +26,12 @@ export class EmployeesService {
             e.middlename,
             e.birthdate,
             e.email,
-            e.telephone);
+            e.telephone,
+            e.street,
+            e.number,
+            e.city,
+            e.country,
+            e.zip);
 
           employees.push(newE);
         }
@@ -41,8 +46,5 @@ export class EmployeesService {
     return this.http.get<employee>(url).pipe();
   }
 
-  httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
-    body: this.employee
-  }
+
 }

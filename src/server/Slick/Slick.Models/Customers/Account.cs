@@ -12,6 +12,7 @@ namespace Slick.Models.Customers
         public string CompanyName { get; set; }
         public string VatNumber { get; set; }
         public string TelephoneNumber { get; set; }
+        public Guid? AddressId { get; set; }
         public Address Address { get; set; }
         public virtual IList<AccountManager> AccountManagers { get; set; }
 

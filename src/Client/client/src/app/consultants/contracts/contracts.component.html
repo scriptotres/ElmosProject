@@ -1,20 +1,43 @@
 <div class=e-div>
-  <div *ngFor="let contract of contracts" class="e-div__contract">
-    <h1>Contract</h1>
-    <label class=e-div__label>contract type</label>
-    <label class="e-div__datalabel">{{contract.contractTypeTitle}}</label>
-    <label class=e-div__label>start datum</label>
-    <label class="e-div__datalabel">{{contract.startDate}}</label>
-    <label class=e-div__label>eind datum</label>
-    <label class="e-div__datalabel">{{contract.endDate}}</label>
-    <label class=e-div__label>view document</label>
-    <a class="e-div__datalabel" target="_blank" href="contract.documentUrl">{{contract.documentUrl}}</a>
-    <label class=e-div__label>Salaris</label>
-    <label class="e-div__datalabel">{{contract.salary}}</label>
-    <label class=e-div__label>datum ondertekend</label>
-    <label class="e-div__datalabel">{{contract.signedDate}}</label>
-  </div>
+  <div class="e-div__contract">
+    <table class="e-table">
+      <thead class="e-thead">
+        <tr>
+          <th>Contract Type</th>
+          <th>Start Datum</th>
+          <th>Eind Datum</th>
+          <th>Bekijk Document</th>
+          <th>Salaris</th>
+          <th>Datum Ondertekend</th>
+          <th>Verkoopprijs</th>
+          <th>Aankoopprijs</th>
+          <th>Marge</th>
+          <th>Marge %</th>
 
+          <th>Bijkomende Commentaar</th>
+
+        </tr>
+      </thead>
+      <tbody class="e-tbody">
+        <ng-container *ngFor="let contract of contracts">
+          <tr>
+            <td>{{contract.contractTypeTitle}}</td>
+            <td>{{contract.startDate}}</td>
+            <td>{{contract.endDate}}</td>
+            <td> <a target="_blank" href="contract.documentUrl">{{contract.documentUrl}}</a></td>
+            <td>{{contract.salary}}</td>
+            <td>{{contract.signedDate}}</td>
+            <td>{{contract.purchasePrice}}</td>
+            <td>{{contract.sellingPrice}}</td>
+            <td>TODO marge</td>
+            <td>TODO marge</td>
+            <td>{{contract.commentary}}</td>
+
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
   <div class="e-div__buttons">
     <label class="e-div__back" (click)="goBack()">
       <i class="fas fa-arrow-circle-left"></i>
@@ -22,8 +45,18 @@
 
     <label class="e-div__back" (click)="goBacktoMenu()">
       <i class="fas fa-list"> </i>
-      </label>
+    </label>
   </div>
   </div>
 
-
+<div class="e-div__chart">
+  <h1>Grafiek van Salaris</h1>
+  <kendo-chart style="width: 300px; height: 200px;">
+    <kendo-chart-series>
+      <kendo-chart-series-item type="line" color="#6C1B82" [data]="contracts" field="salary">
+      </kendo-chart-series-item>
+      <kendo-chart-series-item-tooltip>
+      </kendo-chart-series-item-tooltip>
+    </kendo-chart-series>
+  </kendo-chart>
+</div>

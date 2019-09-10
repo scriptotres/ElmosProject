@@ -32,7 +32,7 @@ namespace Slick.Database.Migrations
 
                     b.Property<string>("Street");
 
-                    b.Property<int>("Zip");
+                    b.Property<string>("Zip");
 
                     b.HasKey("Id");
 
@@ -44,6 +44,8 @@ namespace Slick.Database.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Commentary");
+
                     b.Property<Guid>("ConsultantId");
 
                     b.Property<Guid>("ContractTypeId");
@@ -52,7 +54,11 @@ namespace Slick.Database.Migrations
 
                     b.Property<DateTime?>("EndDate");
 
+                    b.Property<decimal>("PurchasePrice");
+
                     b.Property<decimal>("Salary");
+
+                    b.Property<decimal>("SellingPrice");
 
                     b.Property<DateTime?>("SignedDate");
 

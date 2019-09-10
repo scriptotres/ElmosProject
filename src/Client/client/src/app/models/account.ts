@@ -4,8 +4,10 @@ export default class account {
     public companyname: any,
     public vatnumber: string,
     public city: string,
+    public zip:string,
     public street: string,
-    public number:number
+    public number: number,
+    public country:string
 
   ) { }
 }

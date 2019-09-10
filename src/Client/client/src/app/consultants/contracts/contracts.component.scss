@@ -1,58 +1,59 @@
 @import '../../scss/settings/s.colors.scss';
 
-.e-div {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  align-content: flex-end;
-  justify-content: flex-start;
-}
-
 h1 {
   color: $color-default-end-color;
 }
-
-
-.e-div__contract {
-  min-height: 500px;
-  border-radius: 7px;
-  border: 2px solid $color-default-end-color;
-  padding: 7px;
-  width: 300px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-right: 50px;
+.e-div__search {
+  margin-bottom: 12px;
+  color: $color-default-end-color
 }
 
-
-.e-div__datalabel {
-  width: 90%;
+.e-div__searchinput {
+  width: 190px;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 8px 0 0 10px;
   display: inline-block;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
   box-sizing: border-box;
-  height: 40px;
-
+  height: 20px;
 }
-.e-div__label {
+
+.e-thead {
+  padding-top: 40px;
+  width: 100%;
   color: $color-default-end-color;
 }
 
+.e-table {
+  width: 90%;
+  position: center;
+  color: $color-default-end-color;
+  border-collapse: collapse;
+}
+
+
+th, td {
+  border: 3px solid $color-default-end-color;
+}
+
+td, tr {
+  color: $color-default-end-color;
+}
 .e-div__buttons {
+  display:flex;
   font-size: 50px;
   color: $color-default-end-color;
   order: 1;
   align-self: flex-end;
+  justify-content:flex-end;
 }
 
-.e-div__back{
+.e-div__back {
   margin: 20px;
-
 }
 
 .e-div__back:hover {
   cursor: pointer;
 }
+

@@ -6,16 +6,26 @@
       <th>Email</th>
       <th>Birthday</th>
       <th>Telephone nr</th>
+      <th>Straat</th>
+      <th>Nr.</th>
+      <th>Stad/Gemeente</th>
+      <th>Post Code</th>
+      <th>Land</th>
     </tr>
   </thead>
   <tbody class="e-tbody">
     <ng-container *ngFor="let employee of employees;">
       <tr>
-        <td>  {{employee.firstname}}</td>
-        <td>  {{employee.lastname}}</td>
-        <td>  {{employee.email}}</td>
-        <td>  {{employee.birthdate}}</td>
-        <td>  {{employee.telephone}}</td>
+        <td>{{employee.firstname}}</td>
+        <td>{{employee.lastname}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.birthdate}}</td>
+        <td>{{employee.telephone}}</td>
+        <td>{{employee.street}}</td>
+        <td>{{employee.number}}</td>
+        <td>{{employee.city}}</td>
+        <td>{{employee.zip}}</td>
+        <td>{{employee.country}}</td>
 
       </tr>
     </ng-container>

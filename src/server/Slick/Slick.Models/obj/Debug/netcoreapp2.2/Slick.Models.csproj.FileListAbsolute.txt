@@ -19,3 +19,4 @@ C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Models\
 C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Models\obj\Debug\netcoreapp2.2\Slick.Models.AssemblyInfo.cs
 C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Models\obj\Debug\netcoreapp2.2\Slick.Models.dll
 C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Models\obj\Debug\netcoreapp2.2\Slick.Models.pdb
+C:\Users\Elmos\Desktop\Oefeningen\Data Management\src\server\Slick\Slick.Models\obj\Debug\netcoreapp2.2\Slick.Models.csprojAssemblyReference.cache

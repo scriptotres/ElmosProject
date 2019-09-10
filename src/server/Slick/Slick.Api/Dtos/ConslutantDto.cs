@@ -21,7 +21,7 @@ namespace Slick.Api.Dtos
         public string Number { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
-        public int Zip { get; set; }
+        public string Zip { get; set; }
         public string Email { get; set; }
         public string WorkEmail { get; set; }
         public string Telephone { get; set; }
@@ -29,7 +29,7 @@ namespace Slick.Api.Dtos
 
         public  IList<string> Specialisations { get; set; }
         public  IList<ContractDto> Contracts { get; set; }
-       
+        
         public ContractDto CurrentContract
         {
             get
@@ -37,7 +37,7 @@ namespace Slick.Api.Dtos
                 if (this.Contracts != null)
                 {
                     var query = from c in Contracts
-                                orderby c?.StartDate descending
+                                orderby c?.StartDate ascending
                                 where c?.EndDate >= DateTime.Now
                                 select c;
 

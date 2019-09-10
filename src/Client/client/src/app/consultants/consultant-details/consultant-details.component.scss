@@ -8,11 +8,9 @@ h1 {
   flex-direction: row;
   align-content: flex-end;
   justify-content: flex-start;
-
- 
 }
 
-.e-div__address, .e-div__employee, .e-div__details, .e-div__currentcontract {
+.e-div__address,.e-div__account ,.e-div__employee, .e-div__details {
   border-radius: 7px;
   border: 2px solid $color-default-end-color;
   padding: 7px;
@@ -22,8 +20,25 @@ h1 {
   flex-direction: column;
   margin-right: 50px;
 }
+.e-div__currentcontract {
+  border-radius: 7px;
+  border: 2px solid $color-default-end-color;
+  padding: 7px;
+  width: 540px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-right: 50px;
+}
 
-.e-div__input, .e-select__employee {
+.e-div__currentcontract1, .e-div__currentcontract2 {
+   padding: 7px;
+  width: 240px;
+
+  flex-direction: row;
+
+}
+ .e-div__inputcurrentcontract {
   width: 90%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -33,26 +48,40 @@ h1 {
   box-sizing: border-box;
   height: 40px;
 }
-.e-select__employee
+.e-div__label, .e-div__labelcurrentcontract {
+  color: $color-default-end-color;
+}
+.e-div__labelcurrentcontract, .e-div__inputcurrentcontract
+{
+  display:flex;
+  align-content:flex-start;
+  justify-content:flex-start;
+}
+
+.e-div__input, .e-select__employee, .e-select__account, .e-div__inputcommentary {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 40px;
+}
+.e-div__inputcommentary {
+
+  height: 90px;
+  
+}
+
+
+.e-select__employee, .e-select__account
 {
   height:30px;
   color:$color-default-end-color;
 }
-.e-div__label {
-  color: $color-default-end-color;
-}
-.e-div__buttons {
-  font-size: 50px;
-  color: $color-default-end-color;
-  order: 1;
-  align-self: flex-end;
-}
-.e-div__edit, .e-div__delete {
-  margin: 20px;
-}
-.e-div__edit:hover {
-  cursor: pointer;
-}
+
+
 
 .e-div__contractbutton {
   background-color: $color-default-end-color;
@@ -62,8 +91,23 @@ h1 {
   align-content: center;
   margin-top: 15px;
 }
-.e-div__contractbutton:hover, .e-div__delete {
+.e-div__contractbutton:hover, .e-div__delete:hover {
   cursor:pointer
 }
 
 
+.e-div__buttons {
+  font-size: 50px;
+  color: $color-default-end-color;
+  order: 1;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+.e-div__edit, .e-div__delete {
+  margin: 20px;
+}
+
+.e-div__edit:hover {
+  cursor: pointer;
+}

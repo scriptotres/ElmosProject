@@ -4,7 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Slick.Api.Dtos;
+using Slick.Database;
 using Slick.Models.Customers;
 using Slick.Services.Costumers;
 
@@ -14,30 +16,37 @@ namespace Slick.Api.Controllers
     [ApiController]
     public class AccountsController : ControllerBase
     {
+        private readonly ApplicationDBContext entitiesContext;
         private readonly IAccountService service;
 
-        public AccountsController(IAccountService service)
+        public AccountsController(IAccountService service, ApplicationDBContext entitiesContext)
         {
             this.service = service;
+            this.entitiesContext = entitiesContext;
         }
 
         [HttpGet]
         public IActionResult Get()
         {
-            service.GetAll();
+
             IList<AccountDto> account = new List<AccountDto>();
             IEnumerable<Account> accountfromthedatabase = service.GetAll();
-            
+            entitiesContext.Accounts.Include(acc => acc.Address).ToList();
+
+            service.GetAll();
             foreach (var a in accountfromthedatabase)
             {
                 account.Add(new AccountDto()
                 {
                     CompanyName = a.CompanyName,
-                    VatNumber=a.VatNumber,
+                    VatNumber = a.VatNumber,
                     City = a.Address?.City,
-                    Street = a.Address?.City,
+                    Street = a.Address?.Street,
+                    Country = a.Address?.Country,
+                    Zip = a.Address?.Zip,
                     Number = a.Address?.Number,
-                    Id=a.Id
+
+                    Id = a.Id
                 });
             }
             return Ok(account);
@@ -46,12 +55,28 @@ namespace Slick.Api.Controllers
         [HttpGet("{id}")]
         public IActionResult GetById(Guid id)
         {
-            var a = service.GetById(id);
-            var accountsdto = new AccountDto()
+            entitiesContext.Accounts.Include(Accounts => Accounts.Address).ToList();
+
+            if (id != Guid.Empty && id != null)
             {
-                CompanyName = a.CompanyName
-            };
-            return Ok(accountsdto);
+                var a = service.GetById(id);
+                var accountsdto = new AccountDto()
+                {
+                    CompanyName = a.CompanyName,
+                    VatNumber = a.VatNumber,
+                    Zip = a.Address?.Zip,
+                    City = a.Address?.City,
+                    Country = a.Address?.Country,
+                    Street = a.Address?.Street,
+                    Number = a.Address?.Number,
+                    TelephoneNumber=a.TelephoneNumber
+                    
+
+                };
+                return Ok(accountsdto);
+            }
+            else
+                return Ok(null);
         }
 
         [HttpPost]

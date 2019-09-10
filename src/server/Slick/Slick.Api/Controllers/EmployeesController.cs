@@ -17,17 +17,44 @@ namespace Slick.Api.Controllers
     public class EmployeesController : ControllerBase
     {
         private readonly IEmployeeService service;
+        private readonly ApplicationDBContext entitiesContext;
 
-        public EmployeesController(IEmployeeService service)
+        public EmployeesController(IEmployeeService service, ApplicationDBContext entitiesContext)
         {
             this.service = service;
+            
+            this.entitiesContext = entitiesContext;
+
         }
 
-        [HttpGet]
-        public IActionResult Get([FromQuery]string sort, [FromQuery] string filter, [FromQuery] string value)
+    [HttpGet]
+        public IActionResult Get()
         {
+            IList<EmployeeDto> employees = new List<EmployeeDto>();
+            IEnumerable<Employee> employeesfromdatabase = service.GetAll();
+            entitiesContext.Employees.Include(emp => emp.Address).ToList();
 
-                return Ok(service.GetAll(sort));
+            service.GetAll();
+            foreach (var e in employeesfromdatabase)
+            {
+                employees.Add(new EmployeeDto()
+                {
+                    City = e.Address?.City,
+                    Country = e.Address?.Country,
+                    Number = e.Address?.Number,
+                    Street = e.Address?.Street,
+                    Zip = e.Address?.Zip,
+
+                    Firstname = e.Firstname,
+                    Lastname = e.Lastname,
+                    Telephone = e.Telephone,
+                    Email = e.Email,
+                    Birthdate=e.Birthdate,
+
+                    Id = e.Id
+                });
+            }
+            return Ok(employees);
         }
 
         [HttpGet("{id}")]

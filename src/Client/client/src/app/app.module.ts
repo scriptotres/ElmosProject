@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
-
+import { ChartsModule } from '@progress/kendo-angular-charts';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ConsultantsComponent } from './consultants/consultants.component';
@@ -13,6 +13,10 @@ import { ConsultantDetailsComponent } from './consultants/consultant-details/con
 import { ContractsComponent } from './consultants/contracts/contracts.component';
 import { FilterPipe } from './filter.pipe';
 import { ConsultantEmployeeComponent } from './consultants/consultant-employee/consultant-employee.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import 'hammerjs';
+
+
 
 @NgModule({
   declarations: [
@@ -30,7 +34,7 @@ import { ConsultantEmployeeComponent } from './consultants/consultant-employee/c
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule, ReactiveFormsModule
+    FormsModule, ReactiveFormsModule, ChartsModule, BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,6 +10,6 @@ namespace Slick.Models.Contact
         public string Number { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
-        public int Zip { get; set; }
+        public string Zip { get; set; }
     }
 }

@@ -11,11 +11,13 @@ namespace Slick.Api.Dtos
         public Guid Id { get; set; }
         public Guid ContractTypeId { get; set; }
 
-        public ContractType ContractType { get; set; }
         public string ContractTypeTitle { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public DateTime? SignedDate { get; set; }
+        public decimal SellingPrice { get; set; }
+        public decimal PurchasePrice { get; set; }
+        public string Commentary { get; set; }
 
         public Guid ConsultantId { get; set; }
         public string DocumentUrl { get; set; }

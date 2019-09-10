@@ -13,7 +13,7 @@ export class EmployeesComponent implements OnInit {
 
   getEmployees(): void {
     this.employeeservice.loadEmployees()
-      .subscribe((employeeservice) => this.employees = employeeservice);
+      .subscribe((employeeservice) => [this.employees = employeeservice, console.log(this.employees)]);
   }
     ngOnInit():void {
       this.getEmployees();

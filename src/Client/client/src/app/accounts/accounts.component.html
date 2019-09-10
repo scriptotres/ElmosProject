@@ -3,6 +3,11 @@
     <tr>
       <th>Klantnaam</th>
       <th>VatNummer</th>
+      <th>Straat</th>
+      <th>Nr.</th>
+      <th>Stad/Gemeente</th>
+      <th>Post Code</th>
+      <th>Land</th>
     </tr>
   </thead>
   <tbody class="e-tbody">
@@ -10,6 +15,12 @@
       <tr>
         <td>  {{account.companyname}}</td>
         <td>  {{account.vatnumber}}</td>
+        <td>{{account.street}}</td>
+        <td>{{account.number}}</td>
+        <td>{{account.city}}</td>
+        <td>{{account.zip}}</td>
+        <td>{{account.country}}</td>
+
       </tr>
     </ng-container>
   </tbody>
