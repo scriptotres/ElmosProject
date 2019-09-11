@@ -24,16 +24,15 @@ export class ConsultantsComponent implements OnInit {
   }
 
   getConsultants(): void  {
-    this.consultantservice.loadConsultants().subscribe((consultantservice) => this.consultants = consultantservice);
+    this.consultantservice.loadConsultants().subscribe((consultantservice) => [this.consultants = consultantservice, console.log(this.consultants)]);
    
   }
 
-  toggle() {
-    //let consultants = this.getConsultants();
-    this.show = !this.show;
+  goToContract(c: consultant) {
 
+
+    this.router.navigateByUrl('consultants/contracts/' + c.id);
   }
-
   goToDetails(c: consultant) {
     this.router.navigateByUrl('consultants/details/'+c.id);
   }

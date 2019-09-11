@@ -8,6 +8,7 @@ import { ConsultantDetailsComponent } from './consultants/consultant-details/con
 import { ContractsComponent } from './consultants/contracts/contracts.component';
 import { ConsultantEmployeeComponent } from './consultants/consultant-employee/consultant-employee.component';
 import { AccountsComponent } from './accounts/accounts.component';
+import { AccountDetailsComponent } from './accounts/account-details/account-details.component';
 
 const routes: Routes = [{
   path: '', pathMatch: 'full', component: HomeComponent 
@@ -17,8 +18,9 @@ const routes: Routes = [{
   { path: 'accounts', component: AccountsComponent },
   { path: 'consultants/details/:id', component: ConsultantDetailsComponent },
   { path: 'consultants/contracts/:id', component: ContractsComponent },
-  { path: 'consultants/employees/:id', component: ConsultantEmployeeComponent }
-
+  { path: 'consultants/employees/:id', component: ConsultantEmployeeComponent },
+  { path: 'klant/details/:id', component: AccountDetailsComponent }
+  
  ];
 
 @NgModule({

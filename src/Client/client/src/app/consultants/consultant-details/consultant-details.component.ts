@@ -56,13 +56,13 @@ export class ConsultantDetailsComponent implements OnInit {
 
   getAccounts(): void {
     this.accountservice.loadAccounts()
-      .subscribe(e => [this.accounts = e, console.log(this.accounts)]);
+      .subscribe(e => [this.accounts = e]);
   }
 
 
   getAccount(idAccount): void {
     const id = idAccount;
-    this.accountservice.getAccount(id).subscribe(a => [this.accountofconsultant = a, console.log(this.accountofconsultant)]);
+    this.accountservice.getAccount(id).subscribe(a => [this.accountofconsultant = a]);
   }
 
   getEmployee(idEmployee): void {

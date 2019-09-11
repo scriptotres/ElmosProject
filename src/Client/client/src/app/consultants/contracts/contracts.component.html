@@ -3,6 +3,7 @@
     <table class="e-table">
       <thead class="e-thead">
         <tr>
+          <th>Achternaam</th>
           <th>Contract Type</th>
           <th>Start Datum</th>
           <th>Eind Datum</th>
@@ -12,7 +13,7 @@
           <th>Verkoopprijs</th>
           <th>Aankoopprijs</th>
           <th>Marge</th>
-          <th>Marge %</th>
+          <th>Marge (%)</th>
 
           <th>Bijkomende Commentaar</th>
 
@@ -22,15 +23,16 @@
         <ng-container *ngFor="let contract of contracts">
           <tr>
             <td>{{contract.contractTypeTitle}}</td>
-            <td>{{contract.startDate}}</td>
-            <td>{{contract.endDate}}</td>
+            <td>{{contract.contractTypeTitle}}</td>
+            <td>{{contract.startDate | date:"MM/yyyy"}}</td>
+            <td>{{contract.endDate | date:"MM/yyyy"}}</td>
             <td> <a target="_blank" href="contract.documentUrl">{{contract.documentUrl}}</a></td>
-            <td>{{contract.salary}}</td>
-            <td>{{contract.signedDate}}</td>
-            <td>{{contract.purchasePrice}}</td>
-            <td>{{contract.sellingPrice}}</td>
-            <td>TODO marge</td>
-            <td>TODO marge</td>
+            <td>€{{contract.salary}}</td>
+            <td>{{contract.signedDate | date:"MM/yyyy"}}</td>
+            <td>€{{contract.sellingPrice}}</td>
+            <td>€{{contract.purchasePrice}}</td>
+            <td>€{{contract.margin}}</td>
+            <td>{{contract.marginPercent| number : fractionSize}} %</td>
             <td>{{contract.commentary}}</td>
 
           </tr>
@@ -47,16 +49,35 @@
       <i class="fas fa-list"> </i>
     </label>
   </div>
-  </div>
+</div>
+
 
 <div class="e-div__chart">
   <h1>Grafiek van Salaris</h1>
-  <kendo-chart style="width: 300px; height: 200px;">
+  <kendo-chart style="width: 450px; height: 300px;">
+
     <kendo-chart-series>
-      <kendo-chart-series-item type="line" color="#6C1B82" [data]="contracts" field="salary">
+      <kendo-chart-series-item type="line" color="#6C1B82" [data]="contracts" field="salary" categoryField="date">
       </kendo-chart-series-item>
       <kendo-chart-series-item-tooltip>
       </kendo-chart-series-item-tooltip>
     </kendo-chart-series>
   </kendo-chart>
 </div>
+
+
+
+<div class="e-div__chart">
+  <h1>Grafiek van Salaris</h1>
+  <kendo-chart style="width: 450px; height: 300px;">
+
+    <kendo-chart-series>
+      <kendo-chart-series-item type="line" color="#6C1B82" [data]="contracts" field="salary" categoryField="startDate">
+      </kendo-chart-series-item>
+      <kendo-chart-series-item-tooltip>
+      </kendo-chart-series-item-tooltip>
+    </kendo-chart-series>
+  </kendo-chart>
+</div>
+
+

@@ -3,13 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\accounts",
     "\\src\\app\\consultants",
     "\\src\\app\\consultants\\consultant-details",
+    "\\src\\app\\consultants\\contracts",
     "\\src\\app\\employees",
     "\\src\\app\\models",
-    "\\src\\app\\services"
+    "\\src\\app\\scss\\generic",
+    "\\src\\app\\scss\\settings"
   ],
-  "SelectedNode": "\\src\\app\\consultants\\consultant-details\\consultant-details.component.scss",
+  "SelectedNode": "\\src\\app\\consultants\\consultant-details\\consultant-details.component.html",
   "PreviewInSolutionExplorer": false
 }

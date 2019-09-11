@@ -113,54 +113,29 @@ namespace Slick.Api.Controllers
 
             };
 
-
-            // NOTE: employee en account effe in commentaar laten, deze worde in de frontend opgeroepen!!!!!!
-            //if (c.Employee != null)
-            //{
-            //    var employee = this.employeeService.GetById(consultant.EmployeeId);
-            //    consultant.Employee = new EmployeeDto()
-            //    {
-            //        Id = employee.Id,
-            //        Lastname = employee.Lastname,
-            //        Firstname = employee.Firstname,
-            //        Email = employee.Email,
-            //        Telephone = employee.Telephone
-            //    };
-            //}
-            //if (c.Account != null)
-            //{
-            //    var account = this.accountService.GetById(consultant.AccountId);
-            //    consultant.Account = new AccountDto()
-            //    {
-            //        Id=account.Id,
-            //        CompanyName = account.CompanyName,
-            //        VatNumber = account.VatNumber
-            //    };
-            //}
-
             var contractFromDB = this.contractService.GetContractForConsultants(id);
             consultant.Contracts = new List<ContractDto>();
             foreach (Contract cont in contractFromDB)
             {
+                var procent = ((cont.PurchasePrice * 100) / cont.SellingPrice);
                 consultant.Contracts.Add(new ContractDto
-                {
+                { 
                     EndDate = cont.EndDate,
                     StartDate = cont.StartDate,
+                    Date=cont.StartDate.ToString("yyyy/MM"),
                     DocumentUrl = cont.DocumentUrl,
                     Salary = cont.Salary,
                     SignedDate = cont.SignedDate,
                     Commentary = cont.Commentary,
                     PurchasePrice = cont.PurchasePrice,
                     SellingPrice = cont.SellingPrice,
-
+                    Margin=(cont.SellingPrice - cont.PurchasePrice),
+                    MarginPercent=100-procent,
                     Id = cont.Id,
                     ConsultantId = cont.ConsultantId,
                     ContractTypeId = cont.ContractTypeId,
                     ContractTypeTitle = cont.ContractType.Title,
-                });
-
-
-
+                });;
             }
             return Ok(consultant);
         }
@@ -229,6 +204,7 @@ namespace Slick.Api.Controllers
 
             };
 
+
             if (cDTO.Account != null)
             {
                 var account = new AccountDto()
@@ -250,6 +226,7 @@ namespace Slick.Api.Controllers
             }
             else
                 acc = null;
+
 
             if (cDTO.Employee != null)
             {

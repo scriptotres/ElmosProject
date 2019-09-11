@@ -5,30 +5,29 @@
 <table class="e-table">
   <thead class="e-thead">
     <tr>
-      <th>Firstname</th>
-      <th>Lastname</th>
+      <th>Achternaam</th>
+      <th>Voor naam</th>
       <th>Email</th>
-      <th>Work Mail</th>
-      <th>Birthday</th>
+      <th>Werk Mail</th>
+      <th>Geboorte Datum</th>
       <th>GSM Nummer</th>
-      <th>Telephone nr</th>
+      <th>Telefoon Nummer</th>
     </tr>
   </thead>
   <tbody class="e-tbody">
     <ng-container *ngFor="let consultant of consultants | filter:searchLastname">
       <tr>
-        <td>{{consultant.firstname}}</td>
-
         <td>{{consultant.lastname}}</td>
+        <td>{{consultant.firstname}}</td>
         <td>{{consultant.email}}</td>
         <td>{{consultant.workEmail}}</td>
-        <td>{{consultant.birthdate}}</td>
+        <td>{{consultant.birthdate | date:"dd/MM/yyyy"}}</td>
         <td>{{consultant.mobile}}</td>
         <td>{{consultant.telephone}}</td>
         <td class="e-edit__image" (click)="goToDetails(consultant)">
           <i class="far fa-edit"></i>
         </td>
-
+        <td><i class="far fa-file-alt" (click)="goToContract(consultant)"></i></td>
       </tr>
     </ng-container>
   </tbody>

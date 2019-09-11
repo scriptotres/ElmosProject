@@ -39,10 +39,8 @@ td, tr {
   color: $color-default-end-color;
 }
 
-td:last-child
-{
-  border:none;
-
+td:nth-last-child(-n+2) {
+  border: none;
 }
 
 .far:hover {

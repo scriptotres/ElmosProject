@@ -13,6 +13,7 @@ import { SparklineModule } from '@progress/kendo-angular-charts';
   selector: 'app-contracts',
   templateUrl: './contracts.component.html',
   styleUrls: ['./contracts.component.scss'],
+
 })
 export class ContractsComponent implements OnInit {
 
@@ -23,9 +24,10 @@ export class ContractsComponent implements OnInit {
     this.getConsultant()
 
   }
+  
   public contracts: any;
   public consultant: any;
-  public marge: any;
+
   getConsultant(): void {
     const id = this.route.snapshot.paramMap.get('id');
 
@@ -33,13 +35,10 @@ export class ContractsComponent implements OnInit {
       .subscribe(data => [
         console.log(data),
         this.consultant = data,
-        this.contracts = data.contracts
-        , console.log(this.contracts), this.marge = (this.contracts.sellingPrice - this.contracts.purchasePrice)
-       , console.log(this.marge)
+        this.contracts = data.contracts        
       ]);
     //todo contracts vergelijken met currentcontract en dit in andere kleur zetten
   }
-
 
 
   goBacktoMenu(): void {

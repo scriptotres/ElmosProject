@@ -15,6 +15,7 @@ import { FilterPipe } from './filter.pipe';
 import { ConsultantEmployeeComponent } from './consultants/consultant-employee/consultant-employee.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
+import { AccountDetailsComponent } from './accounts/account-details/account-details.component';
 
 
 
@@ -28,7 +29,8 @@ import 'hammerjs';
     ConsultantDetailsComponent,
     ContractsComponent,
     FilterPipe,
-    ConsultantEmployeeComponent
+    ConsultantEmployeeComponent,
+    AccountDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,6 @@ import 'hammerjs';
     HttpClientModule,
     FormsModule, ReactiveFormsModule, ChartsModule, BrowserAnimationsModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

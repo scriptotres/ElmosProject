@@ -8,19 +8,30 @@
       <th>Stad/Gemeente</th>
       <th>Post Code</th>
       <th>Land</th>
+      <th>Telefoon Nummer</th>
     </tr>
   </thead>
   <tbody class="e-tbody">
     <ng-container *ngFor="let account of accounts;">
       <tr>
-        <td>  {{account.companyname}}</td>
-        <td>  {{account.vatnumber}}</td>
+        <td>{{account.companyname}}</td>
+        <td>{{account.vatnumber}}</td>
         <td>{{account.street}}</td>
         <td>{{account.number}}</td>
         <td>{{account.city}}</td>
         <td>{{account.zip}}</td>
         <td>{{account.country}}</td>
-
+        <td>{{account.telephonenumber}}</td>
+        <td>
+          <label class="e-div__edit" (click)="goToDetails(account)">
+            <i class="far fa-edit"></i>
+          </label>
+        </td>
+        <td>
+          <label class="e-div__delete" (click)="deleteAccount(account)">
+            <i class="fas fa-trash-alt"></i>
+          </label>
+        </td>
       </tr>
     </ng-container>
   </tbody>

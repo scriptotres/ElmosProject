@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Slick.Api.Dtos;
 using Slick.Database;
+using Slick.Models.Contact;
 using Slick.Models.Customers;
 using Slick.Services.Costumers;
 
@@ -40,6 +41,7 @@ namespace Slick.Api.Controllers
                 {
                     CompanyName = a.CompanyName,
                     VatNumber = a.VatNumber,
+                    TelephoneNumber=a.TelephoneNumber,
                     City = a.Address?.City,
                     Street = a.Address?.Street,
                     Country = a.Address?.Country,
@@ -66,11 +68,11 @@ namespace Slick.Api.Controllers
                     VatNumber = a.VatNumber,
                     Zip = a.Address?.Zip,
                     City = a.Address?.City,
+                    AddressId = a.Address.Id,
                     Country = a.Address?.Country,
                     Street = a.Address?.Street,
                     Number = a.Address?.Number,
-                    TelephoneNumber=a.TelephoneNumber
-                    
+                    TelephoneNumber=a.TelephoneNumber,
 
                 };
                 return Ok(accountsdto);
@@ -98,10 +100,31 @@ namespace Slick.Api.Controllers
         }
 
         [HttpPut]
-        public IActionResult Put(Account a)
+        public IActionResult Put(AccountDto aDTO)
         {
-            service.Update(a);
-            return Ok(a);
+            var address = new Address()
+            {
+                City = aDTO.City,
+                Number = aDTO.Number,
+                Street = aDTO.Street,
+                Zip = aDTO.Zip,
+                Country = aDTO.Country,
+                Id = aDTO.AddressId
+
+            };
+            var account = new Account()
+            {
+                Id=aDTO.Id,
+                AddressId=address.Id,
+                TelephoneNumber=aDTO.TelephoneNumber,
+                VatNumber=aDTO.VatNumber,
+                CompanyName = aDTO.CompanyName,
+                Address=address,
+
+                
+            };
+            service.Update(account);
+            return Ok(aDTO);
         }
     }
 }
