@@ -39,7 +39,7 @@ td, tr {
   color: $color-default-end-color;
 }
 
-td:nth-last-child(-n+2) {
+td:last-child {
   border: none;
 }
 

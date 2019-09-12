@@ -70,7 +70,6 @@
         <textarea class=e-div__inputcommentary id="Commentary" name="Commentary" type="text" [(ngModel)]="consultant.currentContract.commentary"></textarea>
         <label class=e-div__labelcurrentcontract for="signedDate">datum ondertekend</label>
         <input class=e-div__inputcurrentcontract id="signedDate" name="signedDate" type="date" [(ngModel)]="consultant.currentContract.signedDate" />
-        <button (click)="viewContracts()" class="e-div__contractbutton">bekijk alle contracten</button>
       </div>
     </div>
     <div class="e-div__account" *ngIf="!accountofconsultant">

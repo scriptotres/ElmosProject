@@ -28,14 +28,10 @@ export class ConsultantsComponent implements OnInit {
    
   }
 
-  goToContract(c: consultant) {
-
-
+  goToDetails(c: consultant) {
     this.router.navigateByUrl('consultants/contracts/' + c.id);
   }
-  goToDetails(c: consultant) {
-    this.router.navigateByUrl('consultants/details/'+c.id);
-  }
+
 
 
   ngOnInit(): void {

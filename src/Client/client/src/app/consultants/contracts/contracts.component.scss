@@ -57,3 +57,28 @@ td, tr {
   cursor: pointer;
 }
 
+
+.e-div__info{
+  display:flex;
+  align-content:flex-start;
+}
+.far {
+  font-size: 30px;
+  color: $color-default-end-color;
+  align-content:center;
+}
+
+.e-label__edit{
+  align-content:center;
+  margin-top:25px;
+  margin-left:20px;
+}
+
+.far:hover {
+  cursor: pointer;
+}
+
+
+.e-list__currentContract {
+  background-color: #C9C7C4;
+}

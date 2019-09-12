@@ -24,11 +24,7 @@
         <td>{{consultant.birthdate | date:"dd/MM/yyyy"}}</td>
         <td>{{consultant.mobile}}</td>
         <td>{{consultant.city}}</td>
-
-        <td class="e-edit__image" (click)="goToDetails(consultant)">
-          <i class="far fa-edit"></i>
-        </td>
-        <td><i class="far fa-file-alt" (click)="goToContract(consultant)"></i></td>
+        <td><i class="far fa-file-alt"(click)="goToDetails(consultant)"></i></td>      
       </tr>
     </ng-container>
   </tbody>

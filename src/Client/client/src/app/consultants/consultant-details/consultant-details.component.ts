@@ -108,11 +108,6 @@ export class ConsultantDetailsComponent implements OnInit {
       });
   }
 
-  viewContracts() {
-
-    const id = this.route.snapshot.paramMap.get('id');
-    this.router.navigateByUrl('consultants/contracts/' + id);
-  }
   viewEmployees() {
     const id = this.route.snapshot.paramMap.get('id');
 
