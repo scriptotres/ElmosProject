@@ -9,6 +9,6 @@ namespace Slick.Models.People
         public string Email { get; set; }
         public string Telephone { get; set; }
 
-
+        public virtual IList<Consultant> Consultant { get; set; }
     }
 }

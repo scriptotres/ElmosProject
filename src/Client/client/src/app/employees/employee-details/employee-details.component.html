@@ -1,0 +1,32 @@
+<table class="e-table">
+  <thead class="e-thead">
+    <tr>
+      <th>Naam</th>
+      <th>Voornaam</th>
+      <th>Email</th>
+      <th>Birthday</th>
+      <th>Telephone nr</th>
+      <th>Straat</th>
+      <th>Nr.</th>
+      <th>Stad/Gemeente</th>
+      <th>Post Code</th>
+      <th>Land</th>
+    </tr>
+  </thead>
+  <tbody class="e-tbody">
+    <ng-container *ngIf="employee">
+      <tr>
+        <td>{{employee.lastname}}</td>
+        <td>{{employee.firstname}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.birthdate| date:"dd/MM/yyyy"}}</td>
+        <td>{{employee.telephone}}</td>
+        <td>{{employee.street}}</td>
+        <td>{{employee.number}}</td>
+        <td>{{employee.city}}</td>
+        <td>{{employee.zip}}</td>
+        <td>{{employee.country}}</td>
+       </tr>
+    </ng-container>
+  </tbody>
+</table>

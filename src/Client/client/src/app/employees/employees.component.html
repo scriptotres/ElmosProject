@@ -1,8 +1,8 @@
 <table class="e-table">
   <thead class="e-thead">
     <tr>
-      <th>Firstname</th>
-      <th>Lastname</th>
+      <th>Naam</th>
+      <th>Voornaam</th>
       <th>Email</th>
       <th>Birthday</th>
       <th>Telephone nr</th>
@@ -16,17 +16,19 @@
   <tbody class="e-tbody">
     <ng-container *ngFor="let employee of employees;">
       <tr>
-        <td>{{employee.firstname}}</td>
         <td>{{employee.lastname}}</td>
+        <td>{{employee.firstname}}</td>
         <td>{{employee.email}}</td>
-        <td>{{employee.birthdate}}</td>
+        <td>{{employee.birthdate| date:"dd/MM/yyyy"}}</td>
         <td>{{employee.telephone}}</td>
         <td>{{employee.street}}</td>
         <td>{{employee.number}}</td>
         <td>{{employee.city}}</td>
         <td>{{employee.zip}}</td>
         <td>{{employee.country}}</td>
-
+        <td class="e-edit__image" (click)="goToDetails(employee)">
+          <i class="far fa-edit"></i>
+        </td>
       </tr>
     </ng-container>
   </tbody>

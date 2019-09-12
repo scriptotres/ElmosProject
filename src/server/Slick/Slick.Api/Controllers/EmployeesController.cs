@@ -17,17 +17,18 @@ namespace Slick.Api.Controllers
     public class EmployeesController : ControllerBase
     {
         private readonly IEmployeeService service;
+        private readonly IConsultantService consultantService;
         private readonly ApplicationDBContext entitiesContext;
 
-        public EmployeesController(IEmployeeService service, ApplicationDBContext entitiesContext)
+        public EmployeesController(IEmployeeService service, IConsultantService consultantService, ApplicationDBContext entitiesContext)
         {
             this.service = service;
-            
+            this.consultantService = consultantService;
             this.entitiesContext = entitiesContext;
 
         }
 
-    [HttpGet]
+        [HttpGet]
         public IActionResult Get()
         {
             IList<EmployeeDto> employees = new List<EmployeeDto>();
@@ -49,7 +50,7 @@ namespace Slick.Api.Controllers
                     Lastname = e.Lastname,
                     Telephone = e.Telephone,
                     Email = e.Email,
-                    Birthdate=e.Birthdate,
+                    Birthdate = e.Birthdate,
 
                     Id = e.Id
                 });
@@ -60,6 +61,7 @@ namespace Slick.Api.Controllers
         [HttpGet("{id}")]
         public IActionResult GetById(Guid id)
         {
+
             var e = service.GetById(id);
             if (e != null)
             {
@@ -68,8 +70,29 @@ namespace Slick.Api.Controllers
                     Firstname = e.Firstname,
                     Lastname = e.Lastname,
                     Telephone = e.Telephone,
-                    Email = e.Email
+                    Email = e.Email,
+                    Birthdate = e.Birthdate,
+                    Number = e.Address?.Number,
+                    City = e.Address?.City,
+                    Country = e.Address?.Country,
+                    Street = e.Address?.Street,
+                    Zip = e.Address?.Zip
                 };
+
+                var consultantFromDB = this.consultantService.GetConsultantsForEmployees(id);
+                employee.consultants = new List<ConslutantDto>();
+                foreach (Consultant c in consultantFromDB)
+                {
+
+                    employee.consultants.Add(new ConslutantDto
+                    {
+                        Firstname = c.Firstname,
+                        Lastname=c.Lastname,
+                        Email=c.Email,
+                        Mobile=c.Mobile,
+                        Street=c.Address?.Street,
+                    });
+                }
                 return Ok(employee);
             }
             return Ok(null);

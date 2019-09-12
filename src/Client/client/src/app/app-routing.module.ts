@@ -9,6 +9,7 @@ import { ContractsComponent } from './consultants/contracts/contracts.component'
 import { ConsultantEmployeeComponent } from './consultants/consultant-employee/consultant-employee.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { AccountDetailsComponent } from './accounts/account-details/account-details.component';
+import { EmployeeDetailsComponent } from './employees/employee-details/employee-details.component';
 
 const routes: Routes = [{
   path: '', pathMatch: 'full', component: HomeComponent 
@@ -19,7 +20,8 @@ const routes: Routes = [{
   { path: 'consultants/details/:id', component: ConsultantDetailsComponent },
   { path: 'consultants/contracts/:id', component: ContractsComponent },
   { path: 'consultants/employees/:id', component: ConsultantEmployeeComponent },
-  { path: 'klant/details/:id', component: AccountDetailsComponent }
+  { path: 'klant/details/:id', component: AccountDetailsComponent },
+  { path: 'employee/details/:id', component: EmployeeDetailsComponent }
   
  ];
 

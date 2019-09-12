@@ -19,5 +19,6 @@ namespace Slick.Services.People
         IEnumerable<Consultant> FindByFirstName(string firstname, string sort);
         IEnumerable<Consultant> FindByLastName(string lastname);
         IEnumerable<Consultant> FindByLastName(string lastname, string sort);
+        IEnumerable<Consultant> GetConsultantsForEmployees(Guid consultantId);
     }
 }

@@ -351,7 +351,7 @@ namespace Slick.Database.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Slick.Models.People.Employee", "Employee")
-                        .WithMany()
+                        .WithMany("Consultant")
                         .HasForeignKey("EmployeeId");
                 });
 

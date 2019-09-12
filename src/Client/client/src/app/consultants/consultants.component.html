@@ -1,17 +1,17 @@
 <div class="e-div__search">
-<label>filter op achternaam</label>
+<label>filter op naam</label>
 <input class="e-div__searchinput" type="text" [(ngModel)]="searchLastname" />
 </div>
 <table class="e-table">
   <thead class="e-thead">
     <tr>
-      <th>Achternaam</th>
-      <th>Voor naam</th>
+      <th>Naam</th>
+      <th>Voornaam</th>
       <th>Email</th>
       <th>Werk Mail</th>
       <th>Geboorte Datum</th>
       <th>GSM Nummer</th>
-      <th>Telefoon Nummer</th>
+      <th>Adres</th>
     </tr>
   </thead>
   <tbody class="e-tbody">
@@ -23,7 +23,8 @@
         <td>{{consultant.workEmail}}</td>
         <td>{{consultant.birthdate | date:"dd/MM/yyyy"}}</td>
         <td>{{consultant.mobile}}</td>
-        <td>{{consultant.telephone}}</td>
+        <td>{{consultant.street}} {{consultant.number}}, {{consultant.city}}</td>
+
         <td class="e-edit__image" (click)="goToDetails(consultant)">
           <i class="far fa-edit"></i>
         </td>

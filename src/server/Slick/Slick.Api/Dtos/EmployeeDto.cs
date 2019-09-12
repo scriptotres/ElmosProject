@@ -18,6 +18,7 @@ namespace Slick.Api.Dtos
         public string Country { get; set; }
         public string City { get; set; }
         public Guid Id { get; set; }
+        public IList<ConslutantDto> consultants { get; set; }
 
     }
 }

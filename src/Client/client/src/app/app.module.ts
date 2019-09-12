@@ -16,6 +16,7 @@ import { ConsultantEmployeeComponent } from './consultants/consultant-employee/c
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 import { AccountDetailsComponent } from './accounts/account-details/account-details.component';
+import { EmployeeDetailsComponent } from './employees/employee-details/employee-details.component';
 
 
 
@@ -30,7 +31,8 @@ import { AccountDetailsComponent } from './accounts/account-details/account-deta
     ContractsComponent,
     FilterPipe,
     ConsultantEmployeeComponent,
-    AccountDetailsComponent
+    AccountDetailsComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     BrowserModule,

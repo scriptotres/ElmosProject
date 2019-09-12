@@ -72,6 +72,8 @@ namespace Slick.Api.Controllers
                     Number = c.Address?.Number,
                     City = c.Address?.City,
                     Zip = c.Address.Zip,
+                    
+                    
 
                 });
             }

@@ -119,5 +119,10 @@ namespace Slick.Services.People
             return this.repo.FindBy(c => c.Lastname == lastname).OrderBy(sort).ToList();
         }
 
+           IEnumerable<Consultant> IConsultantService.GetConsultantsForEmployees(Guid employeeId)
+        {
+            return this.repo.FindBy(c => c.EmployeeId == employeeId).OrderBy(c => c.Lastname).ToList();
+
+        }
     }
 }
