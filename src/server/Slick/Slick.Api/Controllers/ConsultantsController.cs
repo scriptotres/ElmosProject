@@ -243,7 +243,7 @@ namespace Slick.Api.Controllers
                 };
                 emp = employee;
             }
-            else if (cDTO.EmployeeId != null)
+            else if (cDTO.EmployeeId != Guid.Empty)
             {
                 var employee = new EmployeeDto()
                 {
